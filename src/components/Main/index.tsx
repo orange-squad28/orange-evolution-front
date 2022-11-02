@@ -5,7 +5,7 @@ export default function Main() {
     <main className={style.wrapper}>
     <img
       className={style.logo}
-      src="/img/orangelogo.png"
+      src="/img/orangeLogo.png"
       alt="Logo de uma laranja 'derretendo'."
     />
   
