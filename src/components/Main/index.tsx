@@ -1,14 +1,18 @@
+import Cabecalho from '../Cabecalho'
 import style from './Main.module.css'
+
 
 export default function Main() {
   return (
-    <main className={style.wrapper}>
+    <>
+     <Cabecalho/>
+     <main className={style.wrapper}>
       <img
         className={style.logo}
         src="/img/logo_day.png"
         alt="Imagem de um átomo e React Avançado escrito ao lado."
       />
-
+ 
       <h1>Este é um titulo</h1>
 
       <h2>
@@ -23,5 +27,8 @@ export default function Main() {
         alt="Uma montanha como caminho para a web"
       />
     </main>
+    </>
+   
+    
   )
 }
