@@ -1,0 +1,11 @@
+.listasRodape{
+    display: flex;
+    background-color: orangered;
+    font-size: 2rem;
+    justify-content: space-between;
+  
+}
+
+.lista li{
+    list-style: none;
+}

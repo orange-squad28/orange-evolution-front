@@ -1,8 +1,10 @@
+import Footer from '../Footer'
 import style from './Main.module.css'
 
 export default function Main() {
   return (
-    <main className={style.wrapper}>
+    <>
+  <main className={style.wrapper}>
       <img
         className={style.logo}
         src="/img/logo_day.png"
@@ -23,5 +25,7 @@ export default function Main() {
         alt="Uma montanha como caminho para a web"
       />
     </main>
+      <Footer/>
+    </>
   )
 }
