@@ -1,0 +1,19 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": ["next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+  "plugin: prettier/recommended"],
+  "pluggins": ["react-hooks"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/proptypes": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}

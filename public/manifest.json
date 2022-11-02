@@ -1,0 +1,17 @@
+{
+  "name" : "Template React-Next.JS - Boilerplate",
+  "short_name" : "Template React",
+  "icons":[
+    {
+      "src":"/img/logo_day.png",
+      "type":"image/png",
+      "sizes":"512x512"
+    }
+      ],
+      "background_color": "orange_red",
+      "description": "Template React-Next.JS - Boilerplate",
+      "display": "standalone",
+      "start_url": "/",
+      "theme_color": #ff4500
+
+    }
