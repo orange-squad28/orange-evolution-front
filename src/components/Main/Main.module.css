@@ -11,10 +11,29 @@
   justify-content: center;
 }
 
+.containerLogo {
+  display: flex;
+}
+
 .logo {
+
   width: 20rem;
   margin-bottom: 2rem;
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
+}
+
+.containerHome {
+  color: orangered;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-image: url(../../../public/img/illustration.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: min(100rem, 100%);
+  height: min(50rem);
 }
 
 .title {
@@ -23,8 +42,4 @@
 }
 
 
-.ilustration {
-  margin-top: 3rem;
-  margin-bottom: 4rem;
-  width: min(100rem, 100%);
-}
+.ilustration {}
