@@ -4,28 +4,28 @@ import style from './Main.module.css'
 
 export default function Main() {
   return (
+
     <>
      <Cabecalho/>
-     <main className={style.wrapper}>
-      <img
-        className={style.logo}
-        src="/img/logo_day.png"
-        alt="Imagem de um átomo e React Avançado escrito ao lado."
-      />
- 
-      <h1>Este é um titulo</h1>
+     
+    <main className={style.wrapper}>
+    <img
+      className={style.logo}
+      src="/img/orangeLogo.png"
+      alt="Logo de uma laranja 'derretendo'."
+    />
+  
+  <div className={style.containerHome}>
+      <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
+
 
       <h2>
-        Este é um projeto simples para iniciar um projeto com Next.JS com
-        TypeScript, Styled Components para uso na criação de interfaces e
-        aplicativos web.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
       </h2>
 
-      <img
-        className={style.ilustration}
-        src="/img/illustration.svg"
-        alt="Uma montanha como caminho para a web"
-      />
+      <div className={style.ilustration}>
+      </div>
+  </div>
     </main>
     </>
    
