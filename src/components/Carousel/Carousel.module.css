@@ -1,0 +1,18 @@
+.CCaroseul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 115, 0);
+    height: 100vh;
+
+}
+
+
+.Caroseul{
+width: 1000px;
+transition: transform 0.3s cubic-bezier(0.15, 0.16, 0, 1.65);
+}
+.Caroseul:hover{
+    transform: scale(1.02);
+}
+
