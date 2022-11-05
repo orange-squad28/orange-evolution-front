@@ -1,0 +1,22 @@
+.logo {
+  width: 10rem;
+  padding: 1rem 1rem;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.principal {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 36rem;
+  align-items: center;
+}
+
+.botoes {
+  padding: 5px;
+  border-radius: 5px;
+}
