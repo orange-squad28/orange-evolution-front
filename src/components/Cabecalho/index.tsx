@@ -5,14 +5,26 @@ function Cabecalho() {
     <>
       <nav className={style.navigation}>
         <div>
-          <img className={style.logo} src="/img/orangeLogo.png"></img>
+          <img className={style.logo} src="/img/logo-cabecalho.svg"></img>
         </div>
 
-        <div className={style.principal}>
-          <button className={style.botoes}>Login</button>
-          <button className={style.botoes}>Ensine</button>
-          <button className={style.botoes}>Aprenda</button>
-        </div>
+        <ul className={style.nav_options}>
+          <li>
+            <a className={style.links} href="#">
+              Home
+            </a>
+          </li>
+          <li>
+            <a className={style.links} href="#">
+              Trilhas
+            </a>
+          </li>
+          <li>
+            <a className={style.links} href="#">
+              Login
+            </a>
+          </li>
+        </ul>
       </nav>
     </>
   )
