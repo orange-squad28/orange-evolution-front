@@ -17,7 +17,11 @@ html {
 
 html, body, #__next {
   height: 100%;
+  background-color:#0C1828;
+  
+
 }
+
 
 
 `
