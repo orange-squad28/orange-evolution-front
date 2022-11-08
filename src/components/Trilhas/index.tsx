@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
-
+import style from './Trilhas.module.css'
 
 interface ITrilha {
-    id: string;
+    _id: string;
     titulo: string;
     cursos: any[];
     autor: string;
@@ -17,22 +17,19 @@ export default function Trilhas() {
 
     useEffect(() => {
         axios.get(baseURL).then((response) => {
-            console.log(response)
             setTrilha(response.data)
         });
     }, [])
 
     return (
-            <>
-               {trilha.map((trilha) => {
-                    <div key={trilha.id}>
-                        <img src="https://api.lorem.space/image/movie?w=150&amp;amp;amp;amp;h=220"/>
-                        <p className="legend">{trilha.titulo}</p>
-                        <p className="legend">{trilha.autor}</p>
-                        <p className="legend">{trilha.estaAtivo}</p>
-                        <p className="legend">{trilha.id}</p>
-                    </div>
-                })}
-            </>
+        <>
+            {trilha.map((trilha) => {
+                return <div key={trilha._id} className={style.Trilhas}>
+                    <img src="https://api.lorem.space/image/movie?w=150&amp;amp;amp;amp;h=150" />
+                    <p className="legend">{trilha.titulo}</p>
+                    
+                </div>
+            })}
+        </>
     )
 };
