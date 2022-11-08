@@ -6,7 +6,7 @@ export default function Cursos() {
 
   useEffect(() => {
     api
-    .get('/cursos')
+    .get('/trilhas')
     .then((response) => setCursos(response.data))
     .catch((error) => console.log(`ocorre um erro: ${error}`));
   }, []);
