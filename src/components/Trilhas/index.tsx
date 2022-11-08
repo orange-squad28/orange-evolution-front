@@ -1,15 +1,15 @@
-import React, {useEffect, useState} from 'react';
-import api from '../../services/api';
+import React, { useEffect, useState } from 'react'
+import api from '../../services/api'
 
 export default function Trilhas() {
-  const [trilhas, setTrilhas] = useState([]);
+  const [trilhas, setTrilhas] = useState([])
 
   useEffect(() => {
     api
-    .get('/trilhas')
-    .then((response) =>setTrilhas(response.data))
-    .catch((error) => console.log(`ocorre um erro: ${error}`));
-  }, []);
+      .get('/trilhas')
+      .then((response) => setTrilhas(response.data))
+      .catch((error) => console.log(`ocorre um erro: ${error}`))
+  }, [])
 
   return (
     <>
@@ -17,13 +17,12 @@ export default function Trilhas() {
 
       {trilhas.map((trilha) => (
         <>
-        <p key={trilha?.id}>{trilha?.titulo}</p>
-        <p>{trilha.autor}</p>
+          <p key={trilha?.id}>{trilha?.titulo}</p>
+          <p>{trilha.autor}</p>
 
-        <p>{trilha?.id}</p>
+          <p>{trilha?.id}</p>
         </>
-
       ))}
     </>
-  );
+  )
 }
