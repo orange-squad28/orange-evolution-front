@@ -1,0 +1,9 @@
+.button{
+border-radius: 20px;
+color: #FFFFFF;
+background-color: rgba(1, 19, 43, 0.95);
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 25px;
+}
