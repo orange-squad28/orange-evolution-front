@@ -1,8 +1,28 @@
- function Cabecalho(){
+import style from './Cabecalho.module.css';
+import Image from "next/image"
+import Logo from "public/img/orange_juice_logo.svg"
+import Link from 'next/link';
+
+
+
+function Cabecalho(){
     return(
-        <>
-        <h1>Orange Revolution</h1>
-        </>
+        <header className={style.cabecalho}>
+        <Image className={style.logo} src={Logo}
+        alt="Logo da Orange Juice"
+        width={75}
+        height={62}
+        />
+        <nav className={style.menu}>
+          <Link href="#" >Home</Link>
+          <Link href="#" >Trilhas</Link>
+          <Link href="#" >Sobre a Orange</Link>
+          <Link href="#" >Canais</Link>
+          <Link href="#" >Login</Link>
+          <Link href="#" >Cadastrar</Link>
+
+        </nav>
+        </header>
     )
  }
 
