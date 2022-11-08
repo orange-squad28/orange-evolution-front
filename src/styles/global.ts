@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;700&display=swap');
 :root{
   --login-background:#0C1828;
   --login-verde: #00C09B;
@@ -12,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 * {
+ font-family: 'Inconsolata', monospace;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
