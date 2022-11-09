@@ -2,8 +2,9 @@
   display: flex;
   color: #ffffff;
   justify-content: center;
-  height: 59.2rem;
+  height: 59.1rem;
   align-items: center;
+  margin-top: 6rem;
 }
 
 .aside_login {

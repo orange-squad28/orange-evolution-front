@@ -8,7 +8,7 @@ interface BotaoGrandeProps {
 function BotaoGrande({ texto, cor }: BotaoGrandeProps) {
   return (
     <button className={style.botao_grande} style={{ background: cor }}>
-      {texto}
+      {texto.toUpperCase()}
     </button>
   )
 }

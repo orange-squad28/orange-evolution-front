@@ -4,6 +4,8 @@
   background: rgba(1, 19, 43, 0.95);
   border-radius: 20px;
   border: none;
+  color: #ffffff;
+  font-size: 1.7rem;
 }
 
 .input::placeholder {
