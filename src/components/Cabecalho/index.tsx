@@ -1,4 +1,5 @@
 
+
 import style from './Cabecalho.module.css';
 import Image from "next/image"
 import Logo from "public/img/orange_juice_logo.svg"
@@ -29,4 +30,5 @@ function Cabecalho(){
 
 
 export default Cabecalho
+
 
