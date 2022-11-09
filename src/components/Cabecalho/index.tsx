@@ -25,6 +25,7 @@ function Cabecalho(){
         </nav>
         </header>
 )
+    }
 
 
 export default Cabecalho
