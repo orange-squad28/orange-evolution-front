@@ -62,3 +62,9 @@
   justify-content: space-between;
   width: 48.6rem;
 }
+
+.erro {
+  color: red;
+  font-size: 1.6rem;
+  margin-left: 2.6rem;
+}

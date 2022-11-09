@@ -7,7 +7,11 @@ interface BotaoGrandeProps {
 
 function BotaoGrande({ texto, cor }: BotaoGrandeProps) {
   return (
-    <button className={style.botao_grande} style={{ background: cor }}>
+    <button
+      type="submit"
+      className={style.botao_grande}
+      style={{ background: cor }}
+    >
       {texto.toUpperCase()}
     </button>
   )
