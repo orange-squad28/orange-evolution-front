@@ -9,7 +9,6 @@
 
 
 .Caroseul {
-
     min-width: 40%;
     transition: transform 0.3s cubic-bezier(0.15, 0.16, 0, 1.65);
 }
@@ -17,6 +16,10 @@
 .Caroseul:hover {
     transform: scale(1.02);
 }
+@media (max-width:1024px) {
+.Caroseul {
+    min-width: 90%;
+}   
+}
 
-.legend {}
 
