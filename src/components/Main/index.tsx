@@ -1,15 +1,13 @@
 import Cabecalho from '../Cabecalho'
 import Cursos from '../Cursos'
 import style from './Main.module.css'
-import Button from '../Button';
-
-
 
 
 export default function Main() {
   return (
     <>
       <Cabecalho />
+
 
       <main className={style.wrapper}>
         <Button><p>ENSINAR</p></Button>
@@ -36,8 +34,10 @@ export default function Main() {
           </div>
         </div>
       </main>
+
+        <Carrossel />
+
     </>
+  );
 
-
-  )
 }

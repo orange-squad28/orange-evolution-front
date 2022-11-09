@@ -9,6 +9,7 @@ export default function Cursos() {
       .get('/cursos')
       .then((response) => setCursos(response.data))
       .catch((error) => console.log(`ocorre um erro: ${error}`));
+
   }, []);
 
   return (
