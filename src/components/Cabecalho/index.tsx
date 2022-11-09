@@ -11,7 +11,7 @@ function Cabecalho(){
         <Image className={style.logo} src={Logo}
         alt="Logo da Orange Juice"
         width={75}
-        height={62}
+        height={63}
         />
         <nav className={style.menu}>
           <Link href="#" >Home</Link>
