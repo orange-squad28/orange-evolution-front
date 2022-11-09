@@ -62,7 +62,7 @@ function Trilhas() {
 
         return (
             <div className={style.CCaroseul}>
-                <Carousel className={style.Caroseul} stopOnHover={true} autoPlay={true} infiniteLoop={true} emulateTouch={true} selectedItem={1} transitionTime={1000} showArrows={false} showThumbs={false} showStatus={false} useKeyboardArrows={true} >
+                <Carousel className={style.Caroseul} stopOnHover={true} autoPlay={true} infiniteLoop={true} emulateTouch={true} selectedItem={1} transitionTime={1000} showArrows={false} showThumbs={false} showStatus={false} useKeyboardArrows={true}  >
                     {Trilhas()}
                 </Carousel>
 
