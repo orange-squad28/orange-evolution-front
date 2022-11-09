@@ -49,13 +49,15 @@
 }
 
 .h2FirstAChild {
+  font-family: var(--font-home);
   font-size: 50px;
   font-weight: 800;
-  max-width: 450px;
+  max-width: 550px;
   min-height: 150px;
 }
 
 .pFirstAChild {
+  font-family: var(--font-home);
   font-weight: 500;
   font-size: 35px;
   width: 40%;
@@ -71,28 +73,31 @@
 }
 
 .h2LastAChild {
+  font-family: var(--font-home);
   font-weight: 800;
   min-height: 200px;
   font-size: 50px;
-  max-width: 450px;
+  /* max-width: 450px; */
   width: 40%;
 }
 
 .pLastAChild {
+  font-family: var(--font-home);
   text-align: right;
   font-size: 35px;
   font-weight: 500;
-  width: 65%;
+  width: 45%;
   min-height: 500px;
 }
 
 .h2CCarrosel {
+  font-family: var(--font-home);
   margin: 0 auto;
   margin-bottom: 5rem;
   font-size: 35px;
   font-weight: 800;
   color: var(--main-colorSecundary);
-  width: 30%;
+  width: 70%;
   text-align: center;
 }
 

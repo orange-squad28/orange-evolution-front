@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;500;700;800&display=swap');:root{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
   --login-background:#0C1828;
   --login-verde: #00C09B;
   --login-azul: #2B73BF;
@@ -11,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
   --main-background: #01132B;
   --main-color:#FFFFFF;
   --main-colorSecundary:#00C09B;
+  --font-home: 'Montserrat';
 }
 
 * {
