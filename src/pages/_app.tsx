@@ -8,16 +8,16 @@ import GlobalStyle from '../styles/global'
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
-    <Head>
-      <title>Orange Evolution</title>
-      <link rel= "shortcut icon" href= "/favicon.png" type= "image/png" />
-      <link rel="manifest" href="/manifest.json" />
-      <meta name='theme-color' content='orange_red' />
-      <meta name="description" content="Sistema de Controle de Cursos para Orange Juice"/>
+      <Head>
+        <title>Orange Evolution</title>
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name='theme-color' content='orange_red' />
+        <meta name="description" content="Sistema de Controle de Cursos para Orange Juice" />
 
-    </Head>
-    <GlobalStyle />
-    <Component {...pageProps} />
+      </Head>
+      <GlobalStyle />
+      <Component {...pageProps} />
     </>
   )
 }

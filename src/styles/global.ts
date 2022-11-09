@@ -1,7 +1,19 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;700&display=swap');
+:root{
+  --login-background:#0C1828;
+  --login-verde: #00C09B;
+  --login-azul: #2B73BF;
+  --login-roxo: rgba(74, 73, 199, 0.71);
+  --login-preto: rgba(1, 19, 43, 0.95);
+  --login-gradient:linear-gradient(180deg, rgba(74, 73, 209, 0.71) 27.78%, rgba(250, 42, 132, 0.61) 76.37%);
+
+}
+
 * {
+ font-family: 'Inconsolata', monospace;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

@@ -1,9 +1,9 @@
- function Cabecalho(){
-    return(
+function Cabecalho() {
+    return (
         <>
-        <h1>Orange Revolution</h1>
+            <h1>Orange Revolution</h1>
         </>
     )
- }
+}
 
- export default Cabecalho
+export default Cabecalho
