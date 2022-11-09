@@ -10,17 +10,9 @@ export default function Main() {
     <>
      <Cabecalho/>
 
-    <main className={style.wrapper}>
-    <img
-      className={style.logo}
-      src="/img/orangeLogo.png"
-      alt="Logo de uma laranja 'derretendo'."
-    />
+    <main className={style.wrapper}/>
 
-  <div className={style.containerHome}>
-      <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
-    </div>
-    </main>
+
     </>
 
 
