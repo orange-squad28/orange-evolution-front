@@ -1,4 +1,4 @@
-.CCaroseul {
+.contaierCaroseul {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -8,19 +8,25 @@
 }
 
 
-.Caroseul {
+.carousel {
     overflow: hidden;
-    border-radius: 20px;
-    min-width: 40%;
+    border-radius: 25px;
+    min-width: 45%;
     transition: transform 0.3s cubic-bezier(0.15, 0.16, 0, 1.65);
 }
 
-.Caroseul:hover {
+.carousel:hover {
     transform: scale(1.02);
 }
 
+@media (max-width:1900px) {
+    .carousel {
+        width: 55%;
+    }
+}
+
 @media (max-width:1024px) {
-    .Caroseul {
+    .carousel {
         min-width: 90%;
     }
 }

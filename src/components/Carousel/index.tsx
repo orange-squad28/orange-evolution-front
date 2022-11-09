@@ -39,7 +39,7 @@ function Trilhas() {
     
     return trilha.map((trilha) => {
         return (
-            <div key={trilha._id} className={style.Trilhas}>
+            <div key={trilha._id} className={style.trilhas}>
                 <Image
                     alt="Mountains"
                     src={ imgTrilhas(trilha.titulo) }
@@ -61,8 +61,8 @@ function Trilhas() {
     export default function Carrossel() {
 
         return (
-            <div className={style.CCaroseul}>
-                <Carousel className={style.Caroseul} stopOnHover={true} autoPlay={true} infiniteLoop={true} emulateTouch={true} selectedItem={1} transitionTime={1000} showArrows={false} showThumbs={false} showStatus={false} useKeyboardArrows={true}  >
+            <div className={style.contaierCaroseul}>
+                <Carousel className={style.carousel} stopOnHover={true} autoPlay={true} infiniteLoop={true} emulateTouch={true} selectedItem={1} transitionTime={1000} showArrows={false} showThumbs={false} showStatus={false} useKeyboardArrows={true}  >
                     {Trilhas()}
                 </Carousel>
 
