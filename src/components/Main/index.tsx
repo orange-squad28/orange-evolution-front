@@ -9,6 +9,8 @@ export default function Main() {
       <Cabecalho />
 
 
+
+
       <main className={style.wrapper}>
         <Button><p>ENSINAR</p></Button>
         <img
@@ -34,6 +36,7 @@ export default function Main() {
           </div>
         </div>
       </main>
+
 
         <Carrossel />
 
