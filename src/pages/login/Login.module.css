@@ -42,8 +42,8 @@
   height: 100%;
 }
 
-.form_titulo {
-  font-size: 35px;
+.form_input {
+  width: 60%;
 }
 
 .botoes {

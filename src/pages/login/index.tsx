@@ -1,4 +1,5 @@
 import Cabecalho from 'src/components/Cabecalho'
+import Input from 'src/components/Input'
 import style from './Login.module.css'
 
 export default function Login() {
@@ -16,12 +17,9 @@ export default function Login() {
           </button>
         </aside>
         <form className={style.form_login}>
-          <span className={style.form_titulo}>
-            Cadastre-se e evolua sua carreira na tecnologia
-          </span>
-          <input type="text" placeholder="Nome" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Senha" />
+          <Input texto="Nome" tipo="text" icone="name" />
+          <Input texto="Email" tipo="email" icone="email" />
+          <Input texto="Senha" tipo="password" icone="password" />
           <button className={style.botoes}> Ensinar</button>
           <button className={style.botoes}> Aprender</button>
         </form>
