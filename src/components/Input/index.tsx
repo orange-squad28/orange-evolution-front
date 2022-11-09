@@ -1,6 +1,12 @@
 import style from './Input.module.css'
 
-function Input({ tipo, texto, icone }) {
+interface InputProps {
+  tipo: string
+  texto: string
+  icone: string
+}
+
+function Input({ tipo, texto, icone }: InputProps) {
   return (
     <>
       <div className={style.container}>
