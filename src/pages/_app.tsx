@@ -9,11 +9,11 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
     <Head>
-      <title>Minha Página</title>
+      <title>Orange Evolution</title>
       <link rel= "shortcut icon" href= "/favicon.png" type= "image/png" />
       <link rel="manifest" href="/manifest.json" />
       <meta name='theme-color' content='orange_red' />
-      <meta name="description" content="A starter template to work with TypeScript, React, NextJS and Styled Components" />
+      <meta name="description" content="Sistema de Controle de Cursos para Orange Juice"/>
 
     </Head>
     <GlobalStyle />
