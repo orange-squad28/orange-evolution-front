@@ -9,8 +9,7 @@ import orange from "../../../public/img/CarouselOrange.webp"
 interface ITrilha {
     _id: string;
     titulo: string;
-    cursos: [{
-    }];
+    cursos: [{}];
     autor: string;
     estaAtivo: boolean;
 }

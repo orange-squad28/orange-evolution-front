@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
   --login-roxo: rgba(74, 73, 199, 0.71);
   --login-preto: rgba(1, 19, 43, 0.95);
   --login-gradient:linear-gradient(180deg, rgba(74, 73, 209, 0.71) 27.78%, rgba(250, 42, 132, 0.61) 76.37%);
+  --main-background: #01132B;
+  --main-color:#FFFFFF;
 
 }
 
