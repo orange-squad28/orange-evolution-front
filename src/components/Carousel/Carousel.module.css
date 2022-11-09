@@ -1,22 +1,22 @@
-.CCaroseul{
+.CCaroseul {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background-color: var(--main-background);
     height: 100vh;
-
+    width: 100%;
 }
 
 
-.Caroseul{
+.Caroseul {
 
-width: 1000px;
-transition: transform 0.3s cubic-bezier(0.15, 0.16, 0, 1.65);
+    min-width: 40%;
+    transition: transform 0.3s cubic-bezier(0.15, 0.16, 0, 1.65);
 }
-.Caroseul:hover{
+
+.Caroseul:hover {
     transform: scale(1.02);
 }
 
-.legend{
+.legend {}
 
-}

@@ -1,8 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;700&display=swap');
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;500;700;800&display=swap');:root{
   --login-background:#0C1828;
   --login-verde: #00C09B;
   --login-azul: #2B73BF;
@@ -11,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   --login-gradient:linear-gradient(180deg, rgba(74, 73, 209, 0.71) 27.78%, rgba(250, 42, 132, 0.61) 76.37%);
   --main-background: #01132B;
   --main-color:#FFFFFF;
-
+  --main-colorSecundary:#00C09B;
 }
 
 * {
