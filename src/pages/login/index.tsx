@@ -3,6 +3,7 @@ import Cabecalho from 'src/components/Cabecalho'
 import Input from 'src/components/Input'
 import style from './Login.module.css'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import { useRef } from 'react'
 
 type Inputs = {
   nome: string
@@ -11,16 +12,18 @@ type Inputs = {
 }
 
 export default function Login() {
+  // const nomeRef = useRef<HTMLInputElement>(null)
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<Inputs>({ reValidateMode: 'onSubmit' })
+  } = useForm<Inputs>({})
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data)
+    console.log('Valor: ', data)
   }
 
+  console.log(errors)
   return (
     <>
       <Cabecalho />
@@ -40,11 +43,7 @@ export default function Login() {
             Cadastre-se e evolua sua carreira na tecnologia
           </h1>
           <div className={style.form_input}>
-            <input
-              {...register('nome', {
-                required: true,
-              })}
-            />
+            {errors.nome && <span></span>}
             <Input
               texto="Nome"
               tipo="text"
@@ -68,6 +67,13 @@ export default function Login() {
                 },
               })}
             />
+            {errors.email?.type === 'required' && (
+              <span className={style.erro}>O campo email é obrigatório!</span>
+            )}
+            {errors.email?.type === 'pattern' && (
+              <span className={style.erro}>{errors.email.message}</span>
+            )}
+
             <Input
               texto="Senha"
               tipo="password"
