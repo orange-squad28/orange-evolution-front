@@ -20,3 +20,13 @@
   top: 2px;
   left: 50px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 23.3rem;
+  }
+
+  .input {
+    width: inherit;
+  }
+}
