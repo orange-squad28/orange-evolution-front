@@ -67,7 +67,7 @@ export default function Login() {
                 },
               })}
             />
-            {errors.email?.type === 'required' && (
+            {errors.email && errors.email?.type === 'required' && (
               <span className={style.erro}>O campo email é obrigatório!</span>
             )}
             {errors.email?.type === 'pattern' && (
@@ -90,6 +90,15 @@ export default function Login() {
                 },
               })}
             />
+            {errors.senha?.type === 'required' && (
+              <span className={style.erro}>O campo senha é obrigatório!</span>
+            )}
+            {errors.senha?.type === 'minLength' && (
+              <span className={style.erro}>{errors.senha.message}</span>
+            )}
+            {errors.senha?.type === 'maxLength' && (
+              <span className={style.erro}>{errors.senha.message}</span>
+            )}
           </div>
 
           <div className={style.form_botoes}>
