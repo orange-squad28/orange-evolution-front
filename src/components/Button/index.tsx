@@ -1,8 +1,6 @@
 import React from 'react'
 import style from "./Button.module.css"
 
-
-
 interface IProps {
     children?: any;
     style?: React.CSSProperties;

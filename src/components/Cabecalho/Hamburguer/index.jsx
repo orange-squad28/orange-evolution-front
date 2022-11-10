@@ -1,9 +1,9 @@
-import { React, useState } from "react";
-import SideBar from "../SideBar";
-import { Burguer } from "./styled";
+import { React, useState } from 'react'
+import SideBar from '../SideBar'
+import { Burguer } from './styled'
 
-export default function Hamburguer()  {
-  const [open, setOpen] = useState(false);
+export default function Hamburguer() {
+  const [open, setOpen] = useState(false)
 
   return (
     <>
@@ -14,7 +14,5 @@ export default function Hamburguer()  {
       </Burguer>
       <SideBar open={open}></SideBar>
     </>
-  );
-};
-
- 
+  )
+}

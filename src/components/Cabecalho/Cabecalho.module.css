@@ -12,6 +12,11 @@
   left: 32px;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -26,7 +31,6 @@
   margin-left: 2rem;
 }
 
-
 .nav a {
   font-size: 25px;
   font-weight: 900;
@@ -36,7 +40,6 @@
   color: var(--color-menu);
   text-decoration: none;
 }
-
 
 @media (max-width: 1024px) {
   .nav {

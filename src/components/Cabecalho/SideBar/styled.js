@@ -1,11 +1,10 @@
 import styled from 'styled-components'
-// import { Link } from "react-router-dom";
 
 export const SideBarMenu = styled.ul`
   list-style: none;
   display: flex;
   z-index: 100;
- 
+
   @media (max-width: 1024px) {
     flex-flow: column nowrap;
     position: fixed;
@@ -31,7 +30,7 @@ export const LinkContent = styled.p`
   font-size: 24px;
   display: none;
   text-decoration: none;
-  
+
   @media (max-width: 1024px) {
     display: block;
   }

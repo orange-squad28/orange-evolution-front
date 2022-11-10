@@ -2,9 +2,6 @@ import Cabecalho from '../Cabecalho'
 import Carrossel from '../Carousel';
 import Cursos from '../Cursos'
 import style from './Main.module.css'
-import Button from '../Button/index';
-import Carrossel from '../Carousel';
-
 
 export default function Main() {
   return (
@@ -25,7 +22,7 @@ export default function Main() {
         <div>
           <h2 className={style.h2CCarrosel}>CONHEÇA NOSSAS TRILHAS GRATUITAS E EXPLORE O CONHECIMENTO AO LADO DE NOSSAS GUIAS!</h2>
           <Carrossel />
-        </div>  
+        </div>
       </main>
     </>
   );
