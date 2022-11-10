@@ -15,14 +15,25 @@ interface ITrilha {
 }
 
      const images = {
-        "UX/UI Design": "https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        "UX/UI Design": "https://images.unsplash.com/photo-1587440871875-191322ee64b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
         "Desenvolvimento Full Stack": "https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
          QA: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     }
-
+  
     const imgTrilhas = (titulo: string) => {
         //@ts-ignore
        return images[titulo]??"https://images.unsplash.com/photo-1617319683252-027deeba5fd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    
+}
+     const alt = {
+        "UX/UI Design": "(Imagem da trilha) varias pessoas com canetas na mão apontando para layouts de Design com vários post-its coloridos",
+        "Desenvolvimento Full Stack": "(Imagem da trilha) Um teclado como plano principal e mais ao fundo dois monitores aparecendo programas de programação ",
+         QA: "(Imagem da trilha)"
+}
+
+    const altTrilhas = (titulo: string) => {
+        //@ts-ignore
+       return alt[titulo]??"Update Trilha nova"
     
     }
 
@@ -40,18 +51,20 @@ function Trilhas() {
     return trilha.map((trilha) => {
         return (
             <div key={trilha._id} className={style.trilhas}>
-                <Image
-                    alt="Mountains"
-                    src={ imgTrilhas(trilha.titulo) }
-                    quality={100}
-                    sizes="100vw"
-                    width={"70vw"}
-                    height={"50vh"}
-                    style={{
-                        objectFit: 'cover',
-                    }}
-                />
-                <p className="legend">{trilha.titulo}</p>
+                <div className={style.contentImg}>
+                      <img className={style.img}
+                     alt={ altTrilhas(trilha.titulo)}
+                     src={ imgTrilhas(trilha.titulo) }
+                     style={{
+                         objectFit: 'cover',
+                     }}
+                 />
+                </div>
+                <div className={style.contentText}>
+                    <p className={style.tittle}>{trilha.titulo}</p>
+                    <p className={style.legend}>{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}</p>
+                    <ul className={style.features}></ul>
+                </div>
             </div>)
     })
 
@@ -61,8 +74,8 @@ function Trilhas() {
     export default function Carrossel() {
 
         return (
-            <div className={style.contaierCaroseul}>
-                <Carousel className={style.carousel} stopOnHover={true} autoPlay={true} infiniteLoop={true} emulateTouch={true} selectedItem={1} transitionTime={1000} showArrows={false} showThumbs={false} showStatus={false} useKeyboardArrows={true}  >
+            <div className={style.containerCaroseul}>
+                <Carousel className={style.carousel} stopOnHover={true} autoPlay={false} infiniteLoop={true} emulateTouch={true} selectedItem={1} transitionTime={1000} showArrows={false} showThumbs={false} showStatus={false} useKeyboardArrows={true}  >
                     {Trilhas()}
                 </Carousel>
 
@@ -76,4 +89,3 @@ function Trilhas() {
 //         await axios.post(baseURL)
 
 //     }
-
