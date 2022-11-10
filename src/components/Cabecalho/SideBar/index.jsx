@@ -1,18 +1,27 @@
-import React from "react";
-import { SideBarMenu, SideBarLink } from "./styled";
-
-
+import React from 'react'
+import Link from 'next/link'
+import { SideBarMenu, LinkContent } from './styled'
 
 const SideBar = ({ open }) => {
   return (
     <SideBarMenu open={open}>
-      <SideBarLink to="/">Home</SideBarLink>
-      <SideBarLink to="/">Exemple1</SideBarLink>
-      <SideBarLink to="/">Exemple2</SideBarLink>
-      <SideBarLink to="/">Exemple3</SideBarLink>
-      
-    </SideBarMenu>
-  );
-};
+    
+        <Link href="#"><LinkContent>Home</LinkContent></Link>
+    
+        <Link href="#"><LinkContent>Trilhas</LinkContent></Link>
+    
+        <Link href="#"><LinkContent className='aboutOrange'>Sobre a Orange</LinkContent></Link>
+    
+        <Link href="#"><LinkContent>Canais</LinkContent></Link>
+    
+        <Link href="#"><LinkContent>Login</LinkContent></Link>
+    
+        <Link href="#"><LinkContent>Canais</LinkContent></Link>
 
-export default SideBar;
+      
+    
+    </SideBarMenu>
+  )
+}
+
+export default SideBar
