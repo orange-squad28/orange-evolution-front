@@ -12,6 +12,6 @@
       "description": "Template React-Next.JS - Boilerplate",
       "display": "standalone",
       "start_url": "/",
-      "theme_color": #ff4500
+      "theme_color": "#ff4500"
 
     }

@@ -1,45 +1,94 @@
-.wrapper {
-  background-color: orangered;
-  color: #fff;
-  width: 100%;
-  height: 100%;
+.main {
+  background-color: var(--main-background);
+  color: var(--main-color);
+}
+
+.containerAbout {
   display: flex;
   flex-direction: column;
-  padding: 3.2rem;
+  width: 90vw;
+  margin: 0 auto;
+  min-height: 170vh;
+}
+
+.firstAChild {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 65vh;
+  text-align: left;
+}
+
+.h2FirstAChild {
+  font-family: var(--font-home);
+  font-size: 50px;
+  font-weight: 800;
+  max-width: 550px;
+  min-height: 150px;
+}
+
+.pFirstAChild {
+  font-family: var(--font-home);
+  font-weight: 500;
+  font-size: 35px;
+  width: 40%;
+}
+
+.lastAChild {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  text-align: right;
+  min-height: 105vh;
+}
+
+.h2LastAChild {
+  font-family: var(--font-home);
+  font-weight: 800;
+  min-height: 200px;
+  font-size: 50px;
+  width: 40%;
+}
+
+.pLastAChild {
+  font-family: var(--font-home);
+  text-align: right;
+  font-size: 35px;
+  font-weight: 500;
+  width: 45%;
+  min-height: 500px;
+}
+
+.h2CCarrosel {
+  font-family: var(--font-home);
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--main-colorSecundary);
+  width: 70%;
   text-align: center;
-  align-items: center;
-  justify-content: center;
 }
 
-.containerLogo {
-  display: flex;
+@media (max-width:1024px) {
+  .containerAbout {
+    gap: 10rem;
+  }
+
+  .h2FirstAChild {
+    margin-top: 7rem;
+  }
+
+  .h2LastAChild,
+  .pFirstAChild,
+  .pLastAChild {
+    width: 100%;
+  }
+
+  .h2CCarrosel {
+    margin-top: 20rem;
+    width: 80%;
+  }
 }
-
-.logo {
-
-  width: 20rem;
-  margin-bottom: 2rem;
-  padding: 1rem 1rem;
-}
-
-.containerHome {
-  color: orangered;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  background-image: url(../../../public/img/illustration.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: min(100rem, 100%);
-  height: min(50rem);
-}
-
-.title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-
-.ilustration {}
