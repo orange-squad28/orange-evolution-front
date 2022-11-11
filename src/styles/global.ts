@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   --main-background: #01132B;
   --main-color:#FFFFFF;
   --main-colorSecundary:#00C09B;
-  --font-home: 'Montserrat';
+  --font-home: 'Montserrat', sans-serif;
   --menu-color:#FFFFFF;
   --menu-background:#0C1828;
   --menu-font: 'Montserrat', sans-serif;

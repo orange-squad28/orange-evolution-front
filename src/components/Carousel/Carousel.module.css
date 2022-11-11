@@ -24,7 +24,6 @@
     height: 80%;
 }
 
-.contentImg .img {}
 
 .contentText {
     border: 2px solid red;
@@ -45,9 +44,8 @@
     border: 2px solid red;
     width: 80%;
 }
-.contentText .features {
 
-}
+.contentText .features {}
 
 .carousel {
     overflow: hidden;
@@ -69,5 +67,15 @@
 @media (max-width:1024px) {
     .carousel {
         min-width: 90%;
+    }
+
+    .trilhas {
+        flex-direction: column;
+    }
+
+    .contentImg {
+        border: 2px solid red;
+        width: 50%;
+        height: 50%;
     }
 }

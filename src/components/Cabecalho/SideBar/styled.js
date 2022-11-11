@@ -27,7 +27,7 @@ export const LinkContent = styled.p`
   font-weight: 900;
   text-align: center;
   height: 100%;
-  font-size: 24px;
+  font-size: 2.4rem;
   display: none;
   text-decoration: none;
 
@@ -36,7 +36,7 @@ export const LinkContent = styled.p`
   }
 
   &:hover {
-    color: #15cdfc;
+    color: var(--login-verde);
     cursor: pointer;
     transition: 0.1s ease-in-out;
   }
