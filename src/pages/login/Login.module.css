@@ -56,7 +56,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 25.5rem;
+  width: 48.4rem;
+  height: 261px;
 }
 
 .form_botoes {
@@ -76,6 +77,7 @@
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+    align-items: center;
     /* height: 17.6rem; */
   }
 
@@ -87,11 +89,11 @@
     top: 17px;
   }
 
-  /* .form_login {
+  .form_login {
     width: 28.8rem;
     padding: 3rem;
     border-radius: 16px;
-  } */
+  }
 
   .aside_login_titulo {
     font-size: 2rem;
@@ -108,5 +110,10 @@
   }
   .form_botoes {
     width: 20rem;
+  }
+
+  .form_input {
+    width: 23.3rem;
+    height: 210px;
   }
 }

@@ -9,7 +9,7 @@ interface InputProps {
 
 const Input = forwardRef((props: InputProps, ref) => {
   const { tipo, texto, icone, ...restoProps } = props
-  console.log(props)
+
   return (
     <>
       <div className={style.container}>
