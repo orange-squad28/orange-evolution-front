@@ -5,6 +5,7 @@ import style from './Login.module.css'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { useEffect, useRef } from 'react'
 import axios from 'axios'
+import api from 'src/services/api'
 
 type Inputs = {
   nome: string
@@ -19,8 +20,32 @@ export default function Login() {
     watch,
     formState: { errors },
   } = useForm<Inputs>({})
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log('Valor: ', data)
+  const onSubmit: SubmitHandler<Inputs> = (valorInputs, evento) => {
+    // api({ url: '/alunos' }).then(({ data }) => console.log(data))
+    // api({
+    //   method: 'post',
+    //   url: '/alunos',
+    //   data: valorInputs,
+    // })
+    //   .then((response) => console.log(response))
+    //   .catch((error) => console.error(error))
+    console.log(evento)
+
+    const reqBody = {
+      method: 'post',
+      url: '',
+      data: valorInputs,
+    }
+
+    const botaoId = evento?.nativeEvent?.submitter?.id
+    if (botaoId === 'admin') {
+      reqBody.url = '/admins'
+    } else {
+      reqBody.url = '/alunos'
+    }
+    api(reqBody)
+      .then((response) => console.log(response))
+      .catch((error) => console.error(error))
   }
 
   return (
@@ -36,7 +61,7 @@ export default function Login() {
               </p>
             </div>
 
-            <BotaoGrande texto="Entrar" cor="#01132B" />
+            <BotaoGrande texto="Entrar" cor="#01132B" id="login" />
           </aside>
           <form onSubmit={handleSubmit(onSubmit)} className={style.form_login}>
             <h1 className={style.form_login_titulo}>
@@ -102,8 +127,8 @@ export default function Login() {
             </div>
 
             <div className={style.form_botoes}>
-              <BotaoGrande texto="Ensinar" cor="#2B73BF" />
-              <BotaoGrande texto="Aprender" cor="#4A49C7" />
+              <BotaoGrande texto="Ensinar" cor="#2B73BF" id="admin" />
+              <BotaoGrande texto="Aprender" cor="#4A49C7" id="aluno" />
             </div>
           </form>
         </div>
