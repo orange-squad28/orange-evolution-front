@@ -3,7 +3,8 @@ import Cabecalho from 'src/components/Cabecalho'
 import Input from 'src/components/Input'
 import style from './Login.module.css'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import axios from 'axios'
 
 type Inputs = {
   nome: string

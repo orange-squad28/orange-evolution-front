@@ -87,18 +87,20 @@
     top: 17px;
   }
 
-  .form_login {
+  /* .form_login {
     width: 28.8rem;
     padding: 3rem;
     border-radius: 16px;
-  }
+  } */
 
   .aside_login_titulo {
     font-size: 2rem;
+    font-weight: 800;
   }
 
   .aside_login_parag {
     font-size: 1.5rem;
+    font-weight: 600;
   }
   .form_login_titulo {
     font-size: 1.9rem;
