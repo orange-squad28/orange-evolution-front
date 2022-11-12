@@ -9,10 +9,17 @@ import orange from "../../../public/img/CarouselOrange.webp"
 interface ITrilha {
     _id: string;
     titulo: string;
+    descricao: string,
+    imagem: string,
+    descritivoDaImagem: string,
     cursos: [{}];
     autor: string;
     estaAtivo: boolean;
 }
+
+
+
+
 
 const images = {
     "UX/UI Design": "https://images.unsplash.com/photo-1587440871875-191322ee64b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
@@ -37,7 +44,7 @@ const altTrilhas = (titulo: string) => {
 
 }
 
-function Trilhas() {
+export function Trilhas() {
     const [trilha, setTrilha] = useState<ITrilha[]>([])
 
 
@@ -51,6 +58,7 @@ function Trilhas() {
     return trilha.map((trilha) => {
         return (
             <div key={trilha._id} className={style.trilhas}>
+                <h2 className={style.tittleMobile}>{trilha.titulo}</h2>
                 <div className={style.contentImg}>
                     <Image className={style.img}
                         alt={altTrilhas(trilha.titulo)}
@@ -64,9 +72,15 @@ function Trilhas() {
                     />
                 </div>
                 <div className={style.contentText}>
-                    <p className={style.tittle}>{trilha.titulo}</p>
-                    <p className={style.legend}>{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}{trilha.titulo}</p>
-                    <ul className={style.features}></ul>
+                    <h2 className={style.tittle}>{trilha.titulo}</h2>
+                    <p className={style.legend}>{trilha.descricao}</p>
+                    <ul className={style.features}>
+                        <li className={style.feature}>{trilha.titulo}</li>
+                        <li className={style.feature}>{trilha.titulo}</li>
+                        <li className={style.feature}>{trilha.titulo}</li>
+                        <li className={style.feature}>{trilha.titulo}</li>
+                        <li className={style.feature}>{trilha.titulo}</li>
+                    </ul>
                 </div>
             </div>)
     })

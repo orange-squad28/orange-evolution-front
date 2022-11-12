@@ -7,56 +7,69 @@
     width: 100%;
 }
 
-.trilhas {
-    background: var(--login-gradient);
-    width: 100%;
-    height: 80vh;
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-}
-
-.contentImg {
-    border: 2px solid red;
-    width: 40%;
-    height: 80%;
-}
-
-
-.contentText {
-    border: 2px solid red;
-    min-width: 50%;
-    height: 95%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.contentText .tittle {
-    border: 2px solid red;
-}
-
-.contentText .legend {
-    border: 2px solid red;
-    width: 80%;
-}
-
-.contentText .features {}
-
 .carousel {
     overflow: hidden;
     border-radius: 25px;
-    min-width: 60%;
+    width: 90%;
     transition: transform 0.3s cubic-bezier(0.15, 0.16, 0, 1.65);
 }
 
 .carousel:hover {
     transform: scale(1.02);
 }
+
+.trilhas {
+    background: var(--login-gradient);
+    width: 90vw;
+    height: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.tittleMobile {
+    display: none;
+}
+
+.trilhas .contentText .tittle {
+    font-size: 1.8rem;
+}
+
+.trilhas .contentText .legend {
+    font-size: 1.6rem;
+}
+
+.trilhas .contentText .features {
+    font-size: 1.6rem;
+}
+
+.trilhas .contentText .feature {}
+
+.contentImg {
+    width: 30rem;
+}
+
+
+.contentText {
+    min-width: 70%;
+    height: 95%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10rem;
+    justify-content: space-around;
+}
+
+
+
+.contentText .legend {
+    width: 80%;
+}
+
+.contentText .features {}
+
 
 @media (max-width:1900px) {
     .carousel {
@@ -65,17 +78,44 @@
 }
 
 @media (max-width:1024px) {
+    .containerCaroseul {
+        display: none;
+        height: 0vh;
+        width: 0%;
+    }
+
     .carousel {
-        min-width: 90%;
+        min-width: 0%;
+        height: 0vh;
+        display: none;
     }
 
     .trilhas {
         flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem 2rem;
+        border-radius: 20px;
+    }
+
+    .trilhas .tittle {
+        display: none;
+    }
+
+    .tittleMobile {
+        display: block;
+        font-size: 1.8rem;
+
     }
 
     .contentImg {
-        border: 2px solid red;
-        width: 50%;
-        height: 50%;
+        width: 60%;
     }
+
+    .contentText {
+        width: 100%;
+        padding: 0 5rem;
+    }
+
+
 }
