@@ -8,6 +8,17 @@ module.exports = withPlugins([withPWA], {
     dest: "public",
     register : true,
     sw: "/sw.js",
-  }
+  },
+   images: {
+    // remotePatterns: [
+    //   {
+    //     protocol: 'https',
+    //     hostname: 'images.unsplash.com',
+    //     port: '',
+    //     pathname: '*',
+    //   },
+    // ],
+     domains:["images.unsplash.com"]
+  },
 });
 

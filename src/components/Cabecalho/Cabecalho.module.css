@@ -1,6 +1,6 @@
 .cabecalho {
-  background-color: #01132B;
-  color: #fff;
+  background-color: var(--menu-background);
+  color: var(--menu-color);
   padding: 7px 8px;
   display: flex;
   justify-content: space-between;
@@ -15,7 +15,13 @@
 .menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
   width: 80rem;
   margin-right: 1.5rem;
   font-family: 'Montserrat', sans-serif;
@@ -25,8 +31,18 @@
   margin-left: 2rem;
 }
 
-
-.menu a {
-  color: #fff;
+.nav a {
+  font-size: 25px;
+  font-weight: 900;
+  font-family: var(--menu-font);
+  letter-spacing: 0.05px;
+  white-space: nowrap;
+  color: var(--color-menu);
   text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
 }
