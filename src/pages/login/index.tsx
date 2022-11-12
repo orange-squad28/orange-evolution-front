@@ -57,7 +57,7 @@ export default function Login() {
             <div className={style.aside_conteudo}>
               <h1 className={style.aside_login_titulo}>Bem-vindo de volta!</h1>
               <p className={style.aside_login_parag}>
-                Acesse sua conta agora mesmo
+                Acesse sua conta agora mesmo.
               </p>
             </div>
 
