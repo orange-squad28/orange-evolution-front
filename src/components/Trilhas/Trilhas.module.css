@@ -8,11 +8,10 @@
   min-height: 100vh;
 }
 
-
 @media (max-width:1024px) {
   .containerTrilhas {
     min-width: 90%;
     display: flex;
-    
+
   }
 }

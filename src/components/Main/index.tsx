@@ -40,7 +40,7 @@ export default function Main() {
         <section>
           <h2 className={style.h2CCarrosel}>CONHEÇA NOSSAS TRILHAS GRATUITAS E EXPLORE O CONHECIMENTO AO LADO DE NOSSAS GUIAS!</h2>
           <Carrossel />
-          <TrilhasMobile/>
+          <TrilhasMobile />
         </section>
         <section className={style.sectionSocialMidia}>
           <h2 className={style.tittleSocialMidia}>canais</h2>

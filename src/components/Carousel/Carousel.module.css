@@ -36,20 +36,15 @@
     font-size: 1.8rem;
 }
 
-.trilhas .contentText .legend {
+.trilhas .contentText .legend,
+.features .feature {
     font-size: 1.6rem;
+    text-align: left;
 }
-
-.trilhas .contentText .features {
-    font-size: 1.6rem;
-}
-
-.trilhas .contentText .feature {}
 
 .contentImg {
     width: 30rem;
 }
-
 
 .contentText {
     min-width: 70%;
@@ -62,14 +57,9 @@
     justify-content: space-around;
 }
 
-
-
 .contentText .legend {
     width: 80%;
 }
-
-.contentText .features {}
-
 
 @media (max-width:1900px) {
     .carousel {
@@ -116,6 +106,5 @@
         width: 100%;
         padding: 0 5rem;
     }
-
 
 }
