@@ -74,6 +74,50 @@
   margin-left: 2.6rem;
 }
 
+/* CSS Modal */
+
+.modal_container {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal_titulo {
+  color: #ffff;
+}
+
+.cargo_texto {
+  margin-right: 0.7rem;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #ffff;
+}
+
+.input {
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.fechar {
+  position: absolute;
+
+  right: 1.2rem;
+  top: 0.4rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.botao {
+  border-radius: 20px;
+  padding: 0.5rem;
+  width: 14rem;
+  font-weight: bold;
+}
+
 /* Responsivo */
 
 @media (max-width: 768px) {
