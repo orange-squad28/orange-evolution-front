@@ -1,6 +1,5 @@
 import Cabecalho from '../Cabecalho'
 import Carrossel from '../Carousel';
-import Cursos from '../Cursos'
 import style from './Main.module.css'
 
 export default function Main() {
