@@ -38,7 +38,7 @@
   font-family: var(--font-home);
   font-size: 2rem;
   font-weight: 500;
-  
+
 }
 
 .contentImg {
@@ -111,7 +111,6 @@
   font-size: 1.6rem;
   min-height: 60rem;
   width: 60%;
-  border: 2px solid green;
 }
 
 .tittleSocialMidia {
@@ -119,8 +118,6 @@
   width: 80rem;
   font-weight: 800;
   font-size: 1.8rem;
-  border: 2px solid green;
-
 }
 
 .socialMidia {
@@ -129,7 +126,6 @@
   align-items: center;
   width: 77rem;
   min-height: 50rem;
-  border: 2px solid green;
 }
 
 .ulTextMidia {
@@ -226,7 +222,7 @@
 
   .pFirstChild,
   .pLastChild {
-  font-size: 1rem;
+    font-size: 1rem;
   }
 
 
@@ -245,6 +241,7 @@
 
   .tittleSocialMidia {
     width: 80%;
+    font-size: 1.8rem;
   }
 
   .socialMidia {
@@ -257,6 +254,7 @@
   }
 
   .liTextMidia {
+    font-size: 1rem;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
