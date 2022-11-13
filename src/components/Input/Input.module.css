@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.input {
+  width: 48.4rem;
+  padding: 27px 66px;
+  background: rgba(1, 19, 43, 0.95);
+  border-radius: 20px;
+  border: none;
+  color: #ffffff;
+  font-size: 1.7rem;
+}
+
+.input::placeholder {
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.icone {
+  width: 14.38px;
+  height: 21px;
+  position: absolute;
+  top: 22px;
+  left: 40px;
+}
+
+@media (max-width: 768px) {
+  .input {
+    width: 23.3rem;
+    height: 4.3rem;
+  }
+}
