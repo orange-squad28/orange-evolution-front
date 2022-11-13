@@ -6,7 +6,7 @@
   margin-top: 6rem;
 }
 
-.aside_login {
+.aside_cadastro {
   background: #00c09b;
   box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -21,23 +21,16 @@
   padding: 0 6.4rem 10rem 6.4rem;
 }
 
-.aside_login_titulo {
-  font-size: 2.5rem;
-  font-weight: 900;
-  line-height: 3rem;
-  text-align: center;
-  width: 33.6rem;
+.aside_cadastro_titulo {
+  font-size: 3.5rem;
   margin-bottom: 45px;
 }
 
-.aside_login_parag {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 24.38px;
-  text-align: center;
+.aside_cadastro_parag {
+  font-size: 2.5rem;
 }
 
-.form_login {
+.form_cadastro {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -55,33 +48,24 @@
   padding-top: 7.4rem;
 }
 
-.container_texto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form_login_titulo {
-  font-size: 2.5rem;
-  font-weight: 900;
-  padding-bottom: 2rem;
-}
-
-.form_login_parag {
-  font-size: 2rem;
-  font-weight: 600;
+.form_cadastro_titulo {
+  font-size: 3.5rem;
+  width: 48.2rem;
+  display: none;
 }
 
 .form_input {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 48.4rem;
-  height: 210px;
+  height: 261px;
 }
 
 .form_botoes {
   display: flex;
+  justify-content: space-between;
+  width: 48.6rem;
 }
 
 .erro {
@@ -143,16 +127,16 @@
     /* height: 17.6rem; */
   }
 
-  .aside_login {
+  .aside_cadastro {
     width: 25.1rem;
     height: 17.4rem;
     padding: 0 1rem 1rem 1.5rem;
     left: 0;
     top: 17px;
-    align-items: center;
+    align-items: flex-start;
   }
 
-  .form_login {
+  .form_cadastro {
     width: 25.1rem;
     height: 46.4rem;
     padding: 6rem 2rem 0rem 2rem;
@@ -160,33 +144,26 @@
     border-radius: 16px;
   }
 
-  .aside_login_titulo {
-    line-height: unset;
+  .aside_cadastro_titulo {
     font-size: 1.4rem;
     font-weight: 800;
     margin-bottom: 12px;
-    width: auto;
   }
 
-  .aside_login_parag {
+  .aside_cadastro_parag {
     font-size: 1.2rem;
     font-weight: 600;
+    width: 15rem;
   }
-  .form_login_titulo {
-    text-align: center;
+  .form_cadastro_titulo {
     font-size: 1.4rem;
     width: 20.4rem;
     margin-left: 10px;
     display: initial;
   }
-
-  .form_login_parag {
-    font-size: 1.6rem;
-    text-align: center;
-  }
   .form_botoes {
     margin-top: 2.1rem;
-    justify-content: center;
+
     width: 20.4rem;
   }
 
