@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import api from 'src/services/api'
 import Modal from 'react-modal'
-import ModalCadastroAdmin from 'src/components/Modal-cadastro-admin'
+//import ModalCadastroAdmin from 'src/components/Modal-cadastro-admin'
 
 Modal.setAppElement('#__next')
 type Inputs = {

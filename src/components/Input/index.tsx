@@ -19,7 +19,7 @@ const Input = forwardRef((props: InputProps, ref) => {
           type={tipo}
           placeholder={texto}
           {...restoProps}
-          ref={ref}
+          // ref={ref}
         />
       </div>
     </>
