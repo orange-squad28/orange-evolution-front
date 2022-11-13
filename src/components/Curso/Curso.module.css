@@ -1,0 +1,48 @@
+.curso_container {
+  background-color: #00c09b;
+}
+
+@media (max-width: 768px) {
+  .curso_container {
+    min-width: 32.8rem;
+    min-height: 2.8rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .curso_titulo {
+    color: var(--login-background);
+    font-size: 1rem;
+  }
+
+  .curso_conteudo {
+    width: 10.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .icone {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .curso_conteudo_icones {
+    width: 11.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .icones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 8.6rem;
+  }
+}
