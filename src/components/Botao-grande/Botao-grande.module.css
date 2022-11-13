@@ -11,9 +11,9 @@
 
 @media (max-width: 768px) {
   .botao_grande {
-    width: 9.9rem;
-    height: 3.9rem;
+    width: 9rem;
+    height: 3.5rem;
     font-size: 1.2rem;
-    border-radius: 12px;
+    border-radius: 18px;
   }
 }
