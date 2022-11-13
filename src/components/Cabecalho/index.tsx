@@ -17,7 +17,7 @@ function Cabecalho() {
       />
       <div className={style.menu}>
         <nav className={style.nav}>
-          <Link href="#">Home</Link>
+          <Link href="/">Home</Link>
           <Link href="#">Trilhas</Link>
           <Link href="#">Sobre a Orange</Link>
           <Link href="#">Canais</Link>
@@ -30,7 +30,7 @@ function Cabecalho() {
               fontFamily: 'var(--menu-font)',
             }}
           >
-            <Link href="#">Login</Link>
+            <Link href="login">Login</Link>
           </Button>
           <Button
             style={{
@@ -41,7 +41,7 @@ function Cabecalho() {
               fontFamily: 'var(--menu-font)',
             }}
           >
-            <Link href="#">Cadastrar</Link>
+            <Link href="login">Cadastrar</Link>
           </Button>
         </nav>
         <Hamburguer />
