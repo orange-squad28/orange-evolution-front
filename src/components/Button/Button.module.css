@@ -1,0 +1,15 @@
+.button {
+    border-radius: 15px;
+    color: #FFFFFF;
+    background-color: rgba(1, 19, 43, 0.95);
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-size: 25px;
+    padding: 11px 20px;
+    font-family: 'Inconsolata', monospace;
+    transition: 0.5s transform ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.02);
+}

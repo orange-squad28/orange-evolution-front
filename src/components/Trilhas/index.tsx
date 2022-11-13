@@ -1,28 +1,30 @@
-import React, { useEffect, useState } from 'react'
-import api from '../../services/api'
+import { useEffect, useState } from 'react'
+import api from 'src/services/api'
 
-export default function Trilhas() {
-  const [trilhas, setTrilhas] = useState([])
+interface TrilhaProps {
+  children?: any
+  id?: string
+}
+
+export default function TrilhasdeUmAluno(props: TrilhaProps) {
+  const [trilhasDoAluno, setTrilhasDoAluno] = useState<[]>([])
 
   useEffect(() => {
     api
-      .get('/trilhas')
-      .then((response) => setTrilhas(response.data))
+      .get(`/alunos/trilhas/${props.id}`)
+      .then((response) => setTrilhasDoAluno(response.data))
       .catch((error) => console.log(`ocorre um erro: ${error}`))
   }, [])
 
   return (
     <>
-      <h1>Trilhas</h1>
-
-      {trilhas.map((trilha) => (
-        <>
-          <p key={trilha?.id}>{trilha?.titulo}</p>
-          <p>{trilha.autor}</p>
-
-          <p>{trilha?.id}</p>
-        </>
-      ))}
+      {trilhasDoAluno.map((trilha) => {
+        return (
+          <div key={trilha}>
+            <h1>{trilha}</h1>
+          </div>
+        )
+      })}
     </>
   )
 }

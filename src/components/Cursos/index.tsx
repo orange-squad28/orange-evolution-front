@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 
 export default function Cursos() {
@@ -6,9 +6,10 @@ export default function Cursos() {
 
   useEffect(() => {
     api
-    .get('/cursos')
-    .then((response) => setCursos(response.data))
-    .catch((error) => console.log(`ocorre um erro: ${error}`));
+      .get('/cursos')
+      .then((response) => setCursos(response.data))
+      .catch((error) => console.log(`ocorre um erro: ${error}`));
+
   }, []);
 
   return (
@@ -17,16 +18,16 @@ export default function Cursos() {
 
       {cursos.map((curso) => (
         <>
-        <p key={curso?.id}>{curso?.titulo}</p>
-        <p>{curso.autor}</p>
-        <p>{curso?.id}</p>
-        <img src={curso?.imagem} alt={curso?.titulo}/>
-        (estaAtivo ? <p>Ativo</p> : <p>Inativo</p>)
-        <p>{curso.dataCriacao}</p>
-        <p>{curso.dataAtualização}</p>
-        <p>{`${curso.duracao} minutos`}</p>
-        <p>{curso?.descricao}</p>
-        <video src={curso?.video} controls></video>
+          <p key={curso?.id}>{curso?.titulo}</p>
+          <p>{curso.autor}</p>
+          <p>{curso?.id}</p>
+          <img src={curso?.imagem} alt={curso?.titulo} />
+          (estaAtivo ? <p>Ativo</p> : <p>Inativo</p>)
+          <p>{curso.dataCriacao}</p>
+          <p>{curso.dataAtualização}</p>
+          <p>{`${curso.duracao} minutos`}</p>
+          <p>{curso?.descricao}</p>
+          <video src={curso?.video} controls></video>
         </>
 
       ))}
