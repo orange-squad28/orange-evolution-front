@@ -1,6 +1,7 @@
 import { React, useState } from 'react'
 import SideBar from '../SideBar'
 import { Burguer } from './styled'
+import { Link } from 'next/link';
 
 export default function Hamburguer() {
   const [open, setOpen] = useState(false)
@@ -8,7 +9,7 @@ export default function Hamburguer() {
   return (
     <>
       <Burguer open={open} onClick={() => setOpen(!open)}>
-        <div></div>
+        <div><Link src="/">Home</Link></div>
         <div></div>
         <div></div>
       </Burguer>

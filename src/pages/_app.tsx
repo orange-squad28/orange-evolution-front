@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { ContextoGlobal } from 'src/context/context'
 
 import GlobalStyle from '../styles/global'
 
@@ -17,7 +18,9 @@ function App({ Component, pageProps }: AppProps) {
 
       </Head>
       <GlobalStyle />
+      <ContextoGlobal >
       <Component {...pageProps} />
+      </ContextoGlobal>
     </>
   )
 }
