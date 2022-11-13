@@ -15,6 +15,7 @@
 
 .input::placeholder {
   font-size: 25px;
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -28,7 +29,36 @@
 
 @media (max-width: 768px) {
   .input {
-    width: 23.3rem;
+    width: 20.4rem;
     height: 4.3rem;
+    padding: 1.5rem 3.5rem;
+    font-size: 1.4rem;
+  }
+  .icone {
+    width: 1.31rem;
+    height: 1.87rem;
+    left: 13px;
+    top: 12px;
+  }
+
+  .input::placeholder {
+    display: none;
+  }
+
+  .input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  .input:-moz-placeholder {
+    /* Firefox 18- */
+    color: transparent;
+  }
+
+  .input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: transparent;
+  }
+
+  .input:-ms-input-placeholder {
+    color: transparent;
   }
 }
