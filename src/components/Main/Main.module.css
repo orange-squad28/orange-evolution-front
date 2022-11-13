@@ -30,15 +30,15 @@
 
 .h2FirstChild {
   font-family: var(--font-home);
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 800;
 }
 
 .pFirstChild {
   font-family: var(--font-home);
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 500;
-  line-height: 1.6rem;
+  
 }
 
 .contentImg {
@@ -82,12 +82,12 @@
 .h2LastChild {
   font-family: var(--font-home);
   font-weight: 800;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
 }
 
 .pLastChild {
   font-family: var(--font-home);
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
@@ -108,9 +108,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   font-size: 1.6rem;
   min-height: 60rem;
+  width: 60%;
+  border: 2px solid green;
 }
 
 .tittleSocialMidia {
@@ -118,6 +119,7 @@
   width: 80rem;
   font-weight: 800;
   font-size: 1.8rem;
+  border: 2px solid green;
 
 }
 
@@ -127,6 +129,7 @@
   align-items: center;
   width: 77rem;
   min-height: 50rem;
+  border: 2px solid green;
 }
 
 .ulTextMidia {
@@ -200,9 +203,16 @@
   .contentImg {
     display: none;
   }
+
+  .h2CCarrosel {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width:1024px) {
+  .sectionSocialMidia {
+    width: 100%;
+  }
 
   .containerAbout {
     gap: 5rem;
@@ -211,8 +221,13 @@
   .h2FirstChild,
   .h2LastChild {
     margin-bottom: 2rem;
+    font-size: 1.2rem;
   }
 
+  .pFirstChild,
+  .pLastChild {
+  font-size: 1rem;
+  }
 
 
   .h2LastChild,

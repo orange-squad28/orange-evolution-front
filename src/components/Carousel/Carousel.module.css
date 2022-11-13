@@ -94,8 +94,14 @@
 
     .tittleMobile {
         display: block;
-        font-size: 1.8rem;
+        font-size: 1.2rem;
 
+    }
+
+    .trilhas .contentText .legend,
+    .features .feature {
+        font-size: 1.2rem;
+        text-align: left;
     }
 
     .contentImg {

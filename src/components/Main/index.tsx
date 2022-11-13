@@ -1,16 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Cabecalho from '../Cabecalho'
 import Carrossel from '../Carousel';
 import Cursos from '../Cursos'
 import style from './Main.module.css'
-import grupoFCamara from "../../../public/img/guproFCamara.jpg"
-import playVr from "../../../public/img/playVr.jpg"
 import Button from '../Button';
-import youtube from "../../../public/img/youtube.png"
-import discord from "../../../public/img/discord.png"
-import medium from "../../../public/img/medium.png"
-import logoOrange from "../../../public/img/logoOrange.png"
 import { url } from 'inspector';
 import TrilhasMobile from '../Trilhas';
 export default function Main() {
