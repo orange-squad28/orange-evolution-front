@@ -14,14 +14,14 @@ const GlobalStyle = createGlobalStyle`
   --main-background: #01132B;
   --main-color:#FFFFFF;
   --main-colorSecundary:#00C09B;
-  --font-home: 'Montserrat';
+  --font-home: 'Montserrat', sans-serif;
   --menu-color:#FFFFFF;
   --menu-background:#0C1828;
   --menu-font: 'Montserrat', sans-serif;
 }
 
 * {
- font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', monospace;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,7 +35,7 @@ html {
 html, body, #__next {
   height: 100%;
   background-color:#0C1828;
-  
+
 
 }
 

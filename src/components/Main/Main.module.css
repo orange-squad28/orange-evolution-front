@@ -6,89 +6,259 @@
 .containerAbout {
   display: flex;
   flex-direction: column;
-  width: 90vw;
+  justify-content: start;
+  width: 95%;
   margin: 0 auto;
-  min-height: 170vh;
+  padding: 4rem;
+  min-height: 60rem;
 }
 
-.firstAChild {
+.firstContentChild {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
-  min-height: 65vh;
-  text-align: left;
+  min-height: 30rem;
 }
 
-.h2FirstAChild {
-  font-family: var(--font-home);
-  font-size: 50px;
-  font-weight: 800;
-  max-width: 550px;
-  min-height: 150px;
-}
-
-.pFirstAChild {
-  font-family: var(--font-home);
-  font-weight: 500;
-  font-size: 35px;
-  width: 40%;
-}
-
-.lastAChild {
+.contentText {
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  align-items: flex-end;
-  text-align: right;
-  min-height: 105vh;
+  justify-content: space-around;
+  width: 40%;
+  min-height: 25rem;
 }
 
-.h2LastAChild {
+.h2FirstChild {
+  font-family: var(--font-home);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.pFirstChild {
+  font-family: var(--font-home);
+  font-size: 2rem;
+  font-weight: 500;
+
+}
+
+.contentImg {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  width: 100rem;
+  min-height: 35rem;
+}
+
+.firstImg {
+  background: url(../../../public/img/guproFCamara.jpg) no-repeat center center;
+  background-size: cover;
+  width: 45rem;
+  height: 25rem;
+  left: 6rem;
+  top: 3rem;
+  border-radius: 20px;
+}
+
+.lastImg {
+  background: url(../../../public/img/playVr.jpg) no-repeat center;
+  background-size: cover;
+  width: 45rem;
+  height: 25rem;
+  right: 0rem;
+  bottom: 3rem;
+  border-radius: 20px;
+}
+
+
+.lastContentChild {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: start;
+  min-height: 20rem;
+}
+
+.h2LastChild {
   font-family: var(--font-home);
   font-weight: 800;
-  min-height: 200px;
-  font-size: 50px;
-  width: 40%;
+  font-size: 2.5rem;
 }
 
-.pLastAChild {
+.pLastChild {
   font-family: var(--font-home);
-  text-align: right;
-  font-size: 35px;
+  font-size: 2rem;
   font-weight: 500;
-  width: 45%;
-  min-height: 500px;
 }
 
 .h2CCarrosel {
   font-family: var(--font-home);
   margin: 0 auto;
-  margin-bottom: 5rem;
-  font-size: 35px;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--main-colorSecundary);
   width: 70%;
   text-align: center;
+  display: none;
+}
+
+.sectionSocialMidia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  min-height: 60rem;
+  width: 60%;
+}
+
+.tittleSocialMidia {
+  text-transform: uppercase;
+  width: 80rem;
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.socialMidia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 77rem;
+  min-height: 50rem;
+}
+
+.ulTextMidia {
+  font-weight: 800;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  width: 90rem;
+  min-height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.liTextMidia {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgButton1 {
+  font-weight: 600;
+  background: url("../../../public/img/logoOrange.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+}
+
+.imgButton2 {
+  background: url("../../../public/img/discord.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+}
+
+.imgButton3 {
+  background: url("../../../public/img/youtube.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+}
+
+.imgButton4 {
+  background: url("../../../public/img/medium.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+
+@media (max-width:1440px) {
+  .firstContentChild {
+    justify-content: flex-start;
+  }
+
+  .contentText {
+    align-items: start;
+    width: 100%;
+    min-height: 25rem;
+  }
+
+  .contentImg {
+    display: none;
+  }
+
+  .h2CCarrosel {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width:1024px) {
+  .sectionSocialMidia {
+    width: 100%;
+  }
+
   .containerAbout {
-    gap: 10rem;
+    gap: 5rem;
   }
 
-  .h2FirstAChild {
-    margin-top: 7rem;
+  .h2FirstChild,
+  .h2LastChild {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
   }
 
-  .h2LastAChild,
-  .pFirstAChild,
-  .pLastAChild {
+  .pFirstChild,
+  .pLastChild {
+    font-size: 1rem;
+  }
+
+
+  .h2LastChild,
+  .h2FirstChild,
+  .pFirstChild,
+  .pLastChild {
     width: 100%;
   }
 
   .h2CCarrosel {
-    margin-top: 20rem;
+    margin-top: 2rem;
     width: 80%;
+    display: block;
+  }
+
+  .tittleSocialMidia {
+    width: 80%;
+    font-size: 1.8rem;
+  }
+
+  .socialMidia {
+    width: 80%;
+  }
+
+  .ulTextMidia {
+    width: 100%;
+    min-height: 40rem;
+  }
+
+  .liTextMidia {
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2rem;
   }
 }

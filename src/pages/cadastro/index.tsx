@@ -1,7 +1,7 @@
 import BotaoGrande from 'src/components/Botao-grande'
 import Cabecalho from 'src/components/Cabecalho'
 import Input from 'src/components/Input'
-import style from './Login.module.css'
+import style from './Cadastro.module.css'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
@@ -28,7 +28,7 @@ const customStyles = {
   },
 }
 
-export default function Login() {
+export default function Cadastro() {
   const [modalIsOpen, setIsOpen] = useState(false)
   const [dadosInputs, setDadosInputs] = useState({})
   const [cargoInput, setCargoInput] = useState('')
@@ -89,30 +89,43 @@ export default function Login() {
       <Cabecalho />
       <div className={style.corpo}>
         <div className={style.container}>
-          <aside className={style.aside_login}>
-            <div className={style.aside_texto}>
-              <h1 className={style.aside_login_titulo}>
-                Quer fazer parte da nossa comunidade?
+          <aside className={style.aside_cadastro}>
+            <div className={style.aside_conteudo}>
+              <h1 className={style.aside_cadastro_titulo}>
+                Bem-vindo de volta!
               </h1>
-              <p className={style.aside_login_parag}>Inicie sua evolução</p>
-            </div>
-
-            <BotaoGrande
-              texto="Cadastre-se"
-              cor="#2B73BF"
-              id="login"
-              tipo="button"
-            />
-          </aside>
-          <form onSubmit={handleSubmit(onSubmit)} className={style.form_login}>
-            <div className={style.container_texto}>
-              <h1 className={style.form_login_titulo}>Bem-vindo de volta!</h1>
-              <p className={style.form_login_parag}>
+              <p className={style.aside_cadastro_parag}>
                 Acesse sua conta agora mesmo.
               </p>
             </div>
 
+            <BotaoGrande
+              texto="Entrar"
+              cor="#01132B"
+              id="cadastro"
+              tipo="button"
+            />
+          </aside>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className={style.form_cadastro}
+          >
+            <h1 className={style.form_cadastro_titulo}>
+              Cadastre-se e evolua sua carreira na tecnologia
+            </h1>
             <div className={style.form_input}>
+              {errors.nome && <span></span>}
+              <Input
+                texto="Nome"
+                tipo="text"
+                icone="name"
+                {...register('nome', {
+                  required: true,
+                })}
+              />
+              {errors.nome?.type === 'required' && (
+                <span className={style.erro}>O campo nome é obrigatório!</span>
+              )}
               <Input
                 texto="Email"
                 tipo="email"
@@ -161,9 +174,15 @@ export default function Login() {
 
             <div className={style.form_botoes}>
               <BotaoGrande
-                texto="Entrar"
+                texto="Ensinar"
                 cor="#2B73BF"
                 id="admin"
+                tipo="submit"
+              />
+              <BotaoGrande
+                texto="Aprender"
+                cor="#4A49C7"
+                id="aluno"
                 tipo="submit"
               />
             </div>

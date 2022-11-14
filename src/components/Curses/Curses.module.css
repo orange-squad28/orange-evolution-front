@@ -1,0 +1,29 @@
+.curse {
+    width: 70rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    background-color: #00C09B;
+    border-radius: 5px;
+}
+.tittle{
+font-size: 1.8rem;
+}
+
+
+.containerLinks {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.imgArrow{
+background: url(../../../public/img/arrow.png) center no-repeat;
+padding: 1.5rem;
+border: 2px solid red;
+width: 2rem;
+height: 2rem;
+}
