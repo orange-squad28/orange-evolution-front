@@ -22,7 +22,7 @@
     margin-block: 13rem;
 }
 
-.h2trilha {
+.h2Tittle {
     font-size: 2.5rem;
     color: #000000;
 }
@@ -40,6 +40,7 @@
 
 .pTrilhas {
     font-size: 2rem;
+    width: 30rem;
     color: #0C1828F2;
 }
 
