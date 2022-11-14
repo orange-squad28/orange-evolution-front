@@ -1,0 +1,40 @@
+@media (max-width: 720px) {
+  .tempo_trilha {
+    width: 18.5rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    background-color: #00c09b;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--login-background);
+  }
+
+  .guias_trilha {
+    width: 18.5rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    background-color: #00c09b;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  .instrucoes_trilha {
+    width: 32.8rem;
+    height: 10.5rem;
+    background-color: #00c09b;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .icone {
+    width: 1.2rem;
+    height: 1.26rem;
+  }
+}
