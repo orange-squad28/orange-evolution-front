@@ -27,7 +27,7 @@ export default function Curso({ titulo, id, admin }: CursoProps) {
             <div className={styles.icones}>
               <img
                 src="/img/icone-adicionar.svg"
-                alt="botão de adcionar cursos"
+                alt="botão de adicionar cursos"
               />
               <img src="/img/icone-seta-cima.svg" alt="seta para cima" />
               <img src="/img/icone-seta-baixo.svg" alt="seta para baixo" />
