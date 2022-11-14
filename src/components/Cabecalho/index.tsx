@@ -17,32 +17,12 @@ function Cabecalho() {
       />
       <div className={style.menu}>
         <nav className={style.nav}>
-          <Link href="#">Home</Link>
-          <Link href="#">Trilhas</Link>
-          <Link href="#">Sobre a Orange</Link>
-          <Link href="#">Canais</Link>
-          <Button
-            style={{
-              border: 'none',
-              background: 'var(--login-gradient)',
-              borderRadius: '20px',
-              padding: '5px 10px',
-              fontFamily: 'var(--menu-font)',
-            }}
-          >
-            <Link href="#">Login</Link>
-          </Button>
-          <Button
-            style={{
-              border: 'none',
-              background: 'var(--login-gradient)',
-              borderRadius: '20px',
-              padding: '5px 10px',
-              fontFamily: 'var(--menu-font)',
-            }}
-          >
-            <Link href="#">Cadastrar</Link>
-          </Button>
+          <Link href="/" >Home</Link>
+          <Link href="/" >Trilhas</Link>
+          <Link href="/" >Sobre a Orange</Link>
+          <Link href="/" >Canais</Link>
+          <Button style={{ border: "none", background: "var(--login-gradient)", borderRadius: "20px", padding: "5px 20px", fontFamily: "var(--menu-font)" }}><Link href="#" >Login</Link></Button>
+          <Button style={{ border: "none", background: "var(--login-gradient)", borderRadius: "20px", padding: "5px 20px", fontFamily: "var(--menu-font)" }}><Link href="#" >Cadastrar</Link></Button>
         </nav>
         <Hamburguer />
       </div>

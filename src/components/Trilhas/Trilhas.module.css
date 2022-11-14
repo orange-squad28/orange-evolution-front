@@ -1,0 +1,17 @@
+.containerTrilhas {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (max-width:1024px) {
+  .containerTrilhas {
+    min-width: 90%;
+    display: flex;
+
+  }
+}
