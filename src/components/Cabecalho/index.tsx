@@ -1,14 +1,16 @@
-import style from './Cabecalho.module.css';
-import Image from "next/image"
-import Logo from "public/img/orange_juice_logo.svg"
-import Link from 'next/link';
-import Hamburguer from "./Hamburguer"
-import Button from '../Button';
+import style from './Cabecalho.module.css'
+import Image from 'next/image'
+import Logo from 'public/img/orange_juice_logo.svg'
+import Link from 'next/link'
+import Hamburguer from './Hamburguer'
+import Button from '../Button'
 
 function Cabecalho() {
   return (
     <header className={style.cabecalho}>
-      <Image className={style.logo} src={Logo}
+      <Image
+        className={style.logo}
+        src={Logo}
         alt="Logo da Orange Juice"
         width={75}
         height={63}
@@ -29,6 +31,3 @@ function Cabecalho() {
 }
 
 export default Cabecalho
-
-
-

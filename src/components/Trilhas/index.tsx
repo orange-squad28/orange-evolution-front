@@ -8,6 +8,7 @@ export default function TrilhasMobile() {
         <>
             <div className={style.containerTrilhas}>
             {Trilhas()}
+              
             </div>
 
         </>
