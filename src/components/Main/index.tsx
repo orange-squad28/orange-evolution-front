@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Cabecalho from '../Cabecalho'
 import Carrossel from '../Carousel';
-import Cursos from '../Cursos'
 import style from './Main.module.css'
 import Button from '../Button';
 import { url } from 'inspector';
 import TrilhasMobile from '../Trilhas';
+
 export default function Main() {
   return (
     <>

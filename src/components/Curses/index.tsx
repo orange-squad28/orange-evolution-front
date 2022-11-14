@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
+import style from './Curses.module.css'
 
 interface ICurso {
   id: string,
@@ -13,6 +15,7 @@ interface ICurso {
   autor: string,
   estaAtivo: boolean,
   dataAtualização: string,
+  link: string,
 }
 
 export default function Cursos() {
@@ -35,17 +38,12 @@ export default function Cursos() {
 
   return cursos.map((curso) => {
     return (
-      <div key={curso?.id}>
-        <p>{curso?.titulo}</p>
-        <p>{curso.autor}</p>
-        <p>{curso?.id}</p>
-        <img src={curso?.imagem} alt={curso?.titulo} />
-        (estaAtivo ? <p>Ativo</p> : <p>Inativo</p>)
-        <p> {curso.dataCriacao}</p>
-        <p>{curso.dataAtualização}</p>
-        <p>{`${curso.duracao} minutos`}</p>
-        <p>{curso?.descricao}</p>
-        <video src={curso?.video} controls></video>
+      <div key={curso?.id} className={style.curse}>
+        <p className={style.tittle}>{curso?.titulo}</p>
+        <div className={style.containerLinks}>
+          <a href={curso.link} target="_blank"><p>Ver conteúdo</p></a>
+          <a href={curso.link} target="_blank"><div className={style.imgArrow} role="img" aria-label="Uma logo em formato de circulo com uma seta 'vazada' ao meio, apontando a esquerda."></div></a>
+        </div>
       </div>
     );
   })
