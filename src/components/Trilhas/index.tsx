@@ -1,30 +1,16 @@
-import { useEffect, useState } from 'react'
-import api from 'src/services/api'
+import React from 'react'
+import { Trilhas } from "../Carousel/index"
+import style from './Trilhas.module.css'
 
-interface TrilhaProps {
-  children?: any
-  id?: string
-}
+export default function TrilhasMobile() {
+    return (
 
-export default function TrilhasdeUmAluno(props: TrilhaProps) {
-  const [trilhasDoAluno, setTrilhasDoAluno] = useState<[]>([])
+        <>
+            <div className={style.containerTrilhas}>
+            {Trilhas()}
+              
+            </div>
 
-  useEffect(() => {
-    api
-      .get(`/alunos/trilhas/${props.id}`)
-      .then((response) => setTrilhasDoAluno(response.data))
-      .catch((error) => console.log(`ocorre um erro: ${error}`))
-  }, [])
-
-  return (
-    <>
-      {trilhasDoAluno.map((trilha) => {
-        return (
-          <div key={trilha}>
-            <h1>{trilha}</h1>
-          </div>
-        )
-      })}
-    </>
-  )
+        </>
+    )
 }
