@@ -5,15 +5,15 @@ import style from './Carousel.module.css'
 import api from "../../services/api"
 
 interface ITrilha {
-    _id: string;
-    titulo: string;
+    _id: string,
+    titulo: string,
     topicos: [],
     descricao: string,
     imagem: string,
     descritivoDaImagem: string,
-    cursos: [{}];
-    autor: string;
-    estaAtivo: boolean;
+    cursos: [{}],
+    autor: string,
+    estaAtivo: boolean,
 }
 
 export function Trilhas() {

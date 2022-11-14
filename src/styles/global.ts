@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 * {
- font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', monospace;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,7 +35,7 @@ html {
 html, body, #__next {
   height: 100%;
   background-color:#0C1828;
-  
+
 
 }
 

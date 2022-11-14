@@ -35,7 +35,7 @@ export default function Main() {
           <Carrossel />
           <TrilhasMobile />
         </section>
-        <section className={style.sectionSocialMidia}>
+        <section className={style.sectionSocialMidia} id="canais">
           <h2 className={style.tittleSocialMidia}>canais</h2>
           <div className={style.socialMidia}>
             <ul className={style.ulTextMidia}>
@@ -54,8 +54,7 @@ export default function Main() {
                 </Link>
               </Button></li>
               <li className={style.liTextMidia}><p>Canal orange</p><Button style={{ borderRadius: "25px", display: "flex", justifyContent: "center", alignItems: "center", background: "var(--login-gradient)", fontSize: "1.6rem", width: "20rem", padding: "5px 0" }}>
-                <div className={style.imgButton3}>
-                </div>
+                <div className={style.imgButton3}></div>
                 <Link href="/">
                   <p>Acessar no youtube</p>
                 </Link>
