@@ -6,7 +6,8 @@
 .containerAbout {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
+  align-items: center;
   width: 95%;
   margin: 0 auto;
   padding: 4rem;
@@ -15,7 +16,7 @@
 
 .firstContentChild {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   min-height: 30rem;
 }
