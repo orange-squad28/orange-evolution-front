@@ -8,8 +8,7 @@
     "eslint:recommended",
     "plugin:react/recommended",
   "plugin: prettier/recommended"],
-  "pluggins": ["react-hooks"],
-  "rules": {
+   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/proptypes": "off",
