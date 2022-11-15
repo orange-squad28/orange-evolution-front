@@ -3,7 +3,7 @@ import Cabecalho from 'src/components/Cabecalho'
 import Input from 'src/components/Input'
 import style from './Login.module.css'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { useEffect, useRef, useState } from 'react'
+import { SetStateAction, useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import api from 'src/services/api'
 import Modal from 'react-modal'
@@ -31,10 +31,10 @@ const customStyles = {
 
 export default function Login() {
   const [modalIsOpen, setIsOpen] = useState(false)
-
   const [dadosUsuario, setDadosUsuario] = useState({})
   const [logou, setLogou] = useState(false)
   const router = useRouter()
+
 
   const {
     register,
