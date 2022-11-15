@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import api from 'src/services/api'
 import Modal from 'react-modal'
+import { useRouter } from 'next/router'
 
 Modal.setAppElement('#__next')
 type Inputs = {
@@ -30,35 +31,9 @@ const customStyles = {
 
 export default function Login() {
   const [modalIsOpen, setIsOpen] = useState(false)
-  const [dadosInputs, setDadosInputs] = useState({})
-  const [cargoInput, setCargoInput] = useState('')
-
-  function openModal() {
-    setIsOpen(true)
-  }
-
-  function closeModal() {
-    setIsOpen(false)
-  }
-
-  function finalizacaoCadastroAdmin() {
-    const todosOsDados = {
-      ...dadosInputs,
-      cargo: cargoInput,
-    }
-
-    api({
-      method: 'post',
-      url: '/admins',
-      data: todosOsDados,
-    })
-      .then((response) => closeModal())
-      .catch((error) => console.error(error))
-  }
-
-  function preencherCargo(e) {
-    setCargoInput(e.target.value)
-  }
+  const [dadosUsuario, setDadosUsuario] = useState({})
+  const [logou, setLogou] = useState(false)
+  const router = useRouter()
 
   const {
     register,
@@ -68,21 +43,21 @@ export default function Login() {
   } = useForm<Inputs>({})
 
   const onSubmit: SubmitHandler<Inputs> = (valorInputs, evento) => {
-    const botaoId = evento?.nativeEvent?.submitter?.id
-
-    if (botaoId === 'admin') {
-      setDadosInputs(valorInputs)
-      openModal()
-    } else {
-      api({
-        method: 'post',
-        url: '/alunos',
-        data: valorInputs,
+    api
+      .get('/login', { params: valorInputs })
+      .then((resposta) => {
+        localStorage.setItem('dadosUsuario', JSON.stringify(resposta.data))
+        setLogou(true)
+        setDadosUsuario(resposta.data)
       })
-        .then((response) => console.log(response))
-        .catch((error) => console.error(error))
-    }
+      .catch((error) => console.error(error))
   }
+
+  useEffect(() => {
+    if (logou && dadosUsuario) {
+      router.push('/developerCourses')
+    }
+  }, [dadosUsuario])
 
   return (
     <>
@@ -167,40 +142,6 @@ export default function Login() {
                 tipo="submit"
               />
             </div>
-
-            <Modal
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-              style={customStyles}
-              contentLabel="Example Modal"
-            >
-              <div className={style.modal_container}>
-                <h2 className={style.modal_titulo}>
-                  Olá, admin! Digite seu cargo.
-                </h2>
-                <div className={style.cargo}>
-                  <label className={style.cargo_texto} htmlFor="cargo">
-                    Cargo:
-                  </label>
-                  <input
-                    className={style.input}
-                    type="text"
-                    id="cargo"
-                    onChange={preencherCargo}
-                  />
-                </div>
-                <a title="Fechar" className={style.fechar} onClick={closeModal}>
-                  x
-                </a>
-
-                <button
-                  className={style.botao}
-                  onClick={finalizacaoCadastroAdmin}
-                >
-                  Ok
-                </button>
-              </div>
-            </Modal>
           </form>
         </div>
       </div>
