@@ -1,0 +1,14 @@
+.container{
+background-color:  rgb(255, 255, 255);
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.containerCourse{
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+margin-block: 3rem;
+}

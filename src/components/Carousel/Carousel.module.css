@@ -33,12 +33,12 @@
 }
 
 .trilhas .contentText .tittle {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
 }
 
 .trilhas .contentText .legend,
 .features .feature {
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: left;
 }
 
@@ -94,14 +94,14 @@
 
     .tittleMobile {
         display: block;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         text-align: center;
         margin: 0 auto;
     }
 
     .trilhas .contentText .legend,
     .features .feature {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         text-align: left;
     }
 

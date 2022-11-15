@@ -1,0 +1,46 @@
+.course {
+    width: 70rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    background-color: #00C09B;
+    border-radius: 5px;
+}
+
+.tittle {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+
+.containerLinks {
+    font-weight: 700;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+}
+
+.Link {
+    color: #0C1828;
+    font-weight: 700;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+.imgArrow {
+    background: url(../../../public/img/arrow.png) center no-repeat;
+    padding: 2rem;
+    width: 2rem;
+    height: 2rem;
+}

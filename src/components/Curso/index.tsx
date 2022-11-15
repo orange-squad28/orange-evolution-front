@@ -39,7 +39,7 @@ export default function Curso({ titulo, id, admin }: CursoProps) {
             <img
               className={styles.icone}
               src="/img/curso-seta-conteudo.svg"
-              alt="seta para ver contaúdo"
+              alt="seta para ver conteúdo"
             />
           </div>
         )}
