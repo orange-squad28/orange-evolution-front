@@ -53,6 +53,7 @@
   width: 70rem;
   height: 59.2rem;
   padding-top: 7.4rem;
+
 }
 
 .container_texto {
@@ -70,6 +71,7 @@
 .form_login_parag {
   font-size: 2rem;
   font-weight: 600;
+
 }
 
 .form_input {
@@ -149,8 +151,9 @@
     padding: 0 1rem 1rem 1.5rem;
     left: 0;
     top: 17px;
+
     align-items: center;
-  }
+
 
   .form_login {
     width: 25.1rem;
@@ -161,11 +164,13 @@
   }
 
   .aside_login_titulo {
+
     line-height: unset;
     font-size: 1.4rem;
     font-weight: 800;
     margin-bottom: 12px;
     width: auto;
+
   }
 
   .aside_login_parag {
@@ -179,6 +184,7 @@
     width: 20.4rem;
     margin-left: 10px;
     display: initial;
+
   }
 
   .form_login_parag {
