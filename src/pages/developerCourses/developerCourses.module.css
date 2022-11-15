@@ -61,7 +61,6 @@
     height: 1.5rem;
     border-radius: 50%;
     left: -7.2rem;
-
 }
 
 .containerEmblem {
@@ -71,6 +70,7 @@
     justify-content: space-around;
     align-items: flex-start;
 }
+
 
 .containerCourse {
     display: flex;
@@ -95,6 +95,7 @@
     margin-left: 0.29rem;
     width: 2rem;
     height: 2rem;
+    margin-block: 3rem;
 
 }
 

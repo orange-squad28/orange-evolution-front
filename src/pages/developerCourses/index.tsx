@@ -27,6 +27,7 @@ export default function index() {
                         <div className={style.emblem}><div className={style.star}></div></div>
                     </div>
                 </div>
+            <InfoTrilha admin={false} tempo={'100'} tituloTrilha={"full stack developer"} guias="Charles Edurado, Maria Amanda, Jade Figueiredo"/>
                 <div className={style.containerCourses}>
                     <h2 className={style.tittle}>O INÍCIO</h2>
                     <div className={style.containerCourse}>
@@ -41,7 +42,6 @@ export default function index() {
                         {Courses()}
                     </div>
                 </div>
-
             </div>
         </>
     )
