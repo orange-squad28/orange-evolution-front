@@ -4,8 +4,9 @@ interface CursoProps {
   titulo: string
   id: string
   admin: boolean
+  link: string
 }
-export default function Curso({ titulo, id, admin }: CursoProps) {
+export default function Curso({ titulo, id, admin, link }: CursoProps) {
   return (
     <>
       <div className={styles.curso_container}>
@@ -13,12 +14,14 @@ export default function Curso({ titulo, id, admin }: CursoProps) {
 
         {admin === false && (
           <div className={styles.curso_conteudo}>
-            <a className={styles.curso_link}>Ver conteúdo</a>
-            <img
-              className={styles.icone}
-              src="/img/curso-seta-conteudo.svg"
-              alt="seta para ver contaúdo"
-            />
+            <a className={styles.curso_link} href={link}>Ver conteúdo</a>
+            <a className={styles.curso_link} href={link}>
+              <img
+                className={styles.icone}
+                src="/img/curso-seta-conteudo.svg"
+                alt="seta para ver contaúdo"
+              />
+            </a>
           </div>
         )}
 

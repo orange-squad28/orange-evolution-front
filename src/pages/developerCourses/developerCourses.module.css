@@ -1,14 +1,30 @@
-.container{
-background-color:  rgb(255, 255, 255);
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+.container {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
 }
-.containerCourse{
-display: flex;
-flex-direction: column;
-gap: 1.5rem;
-margin-block: 3rem;
+
+.containerCourse {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-block: 3rem;
+}
+
+.tittle {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: 900;
+}
+
+@media (max-width: 768px) {
+    .tittle {
+        font-size: 1.6rem;
+    }
 }
