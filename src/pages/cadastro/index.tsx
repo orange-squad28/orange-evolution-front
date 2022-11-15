@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import api from 'src/services/api'
 import Modal from 'react-modal'
+import { useRouter } from 'next/router'
 
 Modal.setAppElement('#__next')
 type Inputs = {
@@ -32,6 +33,10 @@ export default function Cadastro() {
   const [modalIsOpen, setIsOpen] = useState(false)
   const [dadosInputs, setDadosInputs] = useState({})
   const [cargoInput, setCargoInput] = useState('')
+  const [dadosCadastroUsuario, setDadosCadastroUsuario] = useState({})
+  const [mudancaDePagina, setMudancaDePagina] = useState(false)
+  const [mudancaDePaginaAdmin, setMudancaDePaginaAdmin] = useState(false)
+  const router = useRouter()
 
   function openModal() {
     setIsOpen(true)
@@ -52,7 +57,7 @@ export default function Cadastro() {
       url: '/admins',
       data: todosOsDados,
     })
-      .then((response) => closeModal())
+      .then((response) => setMudancaDePaginaAdmin(true))
       .catch((error) => console.error(error))
   }
 
@@ -74,15 +79,20 @@ export default function Cadastro() {
       setDadosInputs(valorInputs)
       openModal()
     } else {
-      api({
-        method: 'post',
-        url: '/alunos',
-        data: valorInputs,
-      })
-        .then((response) => console.log(response))
-        .catch((error) => console.error(error))
+      localStorage.setItem('dadosCadastroUsuario', JSON.stringify(valorInputs))
+      setDadosCadastroUsuario(valorInputs)
+      setMudancaDePagina(true)
     }
   }
+
+  useEffect(() => {
+    if (mudancaDePagina) {
+      router.push('/trilhas-home')
+    }
+    if (mudancaDePaginaAdmin) {
+      router.push('/login')
+    }
+  }, [mudancaDePagina, mudancaDePaginaAdmin])
 
   return (
     <>

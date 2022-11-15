@@ -9,7 +9,6 @@ import api from 'src/services/api'
 import Modal from 'react-modal'
 import { useRouter } from 'next/router'
 
-
 Modal.setAppElement('#__next')
 type Inputs = {
   nome: string
@@ -37,7 +36,6 @@ export default function Login() {
   const [logou, setLogou] = useState(false)
   const router = useRouter()
 
-
   const {
     register,
     handleSubmit,
@@ -49,12 +47,13 @@ export default function Login() {
     api
       .get('/login', { params: valorInputs })
       .then((resposta) => {
+        localStorage.removeItem('dadosUsuario')
         localStorage.setItem('dadosUsuario', JSON.stringify(resposta.data))
+
         setLogou(true)
         setDadosUsuario(resposta.data)
       })
       .catch((error) => console.error(error))
-
   }
 
   useEffect(() => {
@@ -145,42 +144,7 @@ export default function Login() {
                 id="admin"
                 tipo="submit"
               />
-
             </div>
-
-            <Modal
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-              style={customStyles}
-              contentLabel="Example Modal"
-            >
-              <div className={style.modal_container}>
-                <h2 className={style.modal_titulo}>
-                  Olá, admin! Digite seu cargo.
-                </h2>
-                <div className={style.cargo}>
-                  <label className={style.cargo_texto} htmlFor="cargo">
-                    Cargo:
-                  </label>
-                  <input
-                    className={style.input}
-                    type="text"
-                    id="cargo"
-                    onChange={preencherCargo}
-                  />
-                </div>
-                <a title="Fechar" className={style.fechar} onClick={closeModal}>
-                  x
-                </a>
-
-                <button
-                  className={style.botao}
-                  onClick={finalizacaoCadastroAdmin}
-                >
-                  Ok
-                </button>
-              </div>
-            </Modal>
           </form>
         </div>
       </div>
