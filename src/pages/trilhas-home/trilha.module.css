@@ -1,0 +1,72 @@
+.section {
+    width: 100vw;
+    min-height: 100rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.containerTrilha {
+    min-height: 50rem;
+    width: 120rem;
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerTittle {
+    width: 80%;
+    margin-block: 13rem;
+}
+
+.h2Tittle {
+    font-size: 2.5rem;
+    color: #000000;
+}
+
+.trilhas {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15rem;
+    background-color: #00C09B;
+    width: 90rem;
+    height: 13rem;
+    border-radius: 20px;
+}
+
+.pTrilhas {
+    font-size: 2rem;
+    font-weight: 800;
+    width: 30rem;
+    color: #0C1828F2;
+}
+
+.pButton {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1050px) {
+    .section {
+        width: 100%;
+
+    }
+
+    .trilhas {
+        padding: 0 2rem;
+        gap: 4rem;
+        width: 80%;
+    }
+
+    .pTrilhas {
+        font-size: 1.2rem;
+    }
+
+    .pButton {
+        width: 8rem;
+        font-size: 1rem;
+    }
+}

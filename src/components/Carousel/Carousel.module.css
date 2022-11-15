@@ -1,17 +1,16 @@
-.contaierCaroseul {
+.containerCaroseul {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     background-color: var(--main-background);
     height: 100vh;
     width: 100%;
 }
 
-
 .carousel {
     overflow: hidden;
     border-radius: 25px;
-    min-width: 45%;
+    width: 90%;
     transition: transform 0.3s cubic-bezier(0.15, 0.16, 0, 1.65);
 }
 
@@ -19,14 +18,101 @@
     transform: scale(1.02);
 }
 
+.trilhas {
+    background: var(--login-gradient);
+    width: 90vw;
+    height: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.tittleMobile {
+    display: none;
+}
+
+.trilhas .contentText .tittle {
+    font-size: 2.5rem;
+}
+
+.trilhas .contentText .legend,
+.features .feature {
+    font-size: 2rem;
+    text-align: left;
+}
+
+.contentImg {
+    width: 50rem;
+}
+
+.contentText {
+    min-width: 70%;
+    height: 95%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10rem;
+    justify-content: space-around;
+}
+
+.contentText .legend {
+    width: 80%;
+}
+
 @media (max-width:1900px) {
     .carousel {
-        width: 55%;
+        width: 90%;
     }
 }
 
 @media (max-width:1024px) {
-    .carousel {
-        min-width: 90%;
+    .containerCaroseul {
+        display: none;
+        height: 0vh;
+        width: 0%;
     }
+
+    .carousel {
+        min-width: 0%;
+        height: 0vh;
+        display: none;
+    }
+
+    .trilhas {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem 2rem;
+        border-radius: 20px;
+    }
+
+    .trilhas .tittle {
+        display: none;
+    }
+
+    .tittleMobile {
+        display: block;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .trilhas .contentText .legend,
+    .features .feature {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .contentImg {
+        text-align: center;
+        width: 100%;
+    }
+
+    .contentText {
+        width: 100%;
+        padding: 0 5rem;
+    }
+
 }

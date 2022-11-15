@@ -1,0 +1,123 @@
+.container {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+}
+
+.containerProgressEmblem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.progressBar {
+    width: 15rem;
+    height: 0.8rem;
+    background-color: #00C09B;
+    border-radius: 0 20px 20px 0;
+}
+
+.progressAllBar {
+    width: 50rem;
+    height: 0.8rem;
+    background: linear-gradient(180deg, rgba(74, 73, 199, 0.71) 15.79%, rgba(250, 42, 132, 0.61) 77.92%);
+    border-radius: 20px 0 0 20px;
+}
+
+.containerPoints {
+    position: absolute;
+    
+}
+
+.points {
+    position: relative;
+    border: 2px solid rgba(226, 5, 255, 0.927);
+    background-color: rgba(226, 5, 255, 0.927);
+    bottom: 3.2rem;
+    width: 1rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    left: 7.5rem;
+}
+
+.points:nth-last-child(2) {
+    position: relative;
+    border: 2px solid rgb(134, 0, 244);
+    background-color: rgb(134, 0, 244);
+    bottom: 1.7rem;
+    width: 1rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    left: -7.2rem;
+}
+
+.containerEmblem {
+    
+    width: 30rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+.containerCourse {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.emblem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../../public/img/emblem.png) center no-repeat;
+    width: 5rem;
+    height: 5rem;
+}
+
+.star {
+    background: url(../../../public/img/star.png) center no-repeat;
+    margin-top: 1rem;
+    margin-left: 0.29rem;
+    width: 2rem;
+    height: 2rem;
+    margin-block: 3rem;
+
+}
+
+.tittle {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: 900;
+}
+
+@media (max-width: 768px) {
+
+    .progressBar {
+        width: 5rem;
+    }
+
+    .progressAllBar {
+        width: 30rem;
+
+    }
+
+    .tittle {
+        font-size: 1.6rem;
+    }
+}

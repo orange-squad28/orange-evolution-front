@@ -1,7 +1,7 @@
 .botao_grande {
   width: 18.8rem;
   height: 7rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #ffffff;
   border-radius: 20px;
@@ -13,7 +13,7 @@
 
 @media (max-width: 768px) {
   .botao_grande {
-    width: 9rem;
+    width: 11rem;
     height: 3.5rem;
     font-size: 1.2rem;
     border-radius: 18px;

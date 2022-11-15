@@ -7,7 +7,7 @@ import { SetStateAction, useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import api from 'src/services/api'
 import Modal from 'react-modal'
-//import ModalCadastroAdmin from 'src/components/Modal-cadastro-admin'
+import { useRouter } from 'next/router'
 
 Modal.setAppElement('#__next')
 type Inputs = {
@@ -31,35 +31,10 @@ const customStyles = {
 
 export default function Login() {
   const [modalIsOpen, setIsOpen] = useState(false)
-  const [dadosInputs, setDadosInputs] = useState({})
-  const [cargoInput, setCargoInput] = useState('')
+  const [dadosUsuario, setDadosUsuario] = useState({})
+  const [logou, setLogou] = useState(false)
+  const router = useRouter()
 
-  function openModal() {
-    setIsOpen(true)
-  }
-
-  function closeModal() {
-    setIsOpen(false)
-  }
-
-  function finalizacaoCadastroAdmin() {
-    const todosOsDados = {
-      ...dadosInputs,
-      cargo: cargoInput,
-    }
-
-    api({
-      method: 'post',
-      url: '/admins',
-      data: todosOsDados,
-    })
-      .then((response) => closeModal())
-      .catch((error) => console.error(error))
-  }
-
-  function preencherCargo(event: { target: { value: SetStateAction<string> } }) {
-    setCargoInput(event.target.value)
-  }
 
   const {
     register,
@@ -69,21 +44,23 @@ export default function Login() {
   } = useForm<Inputs>({})
 
   const onSubmit: SubmitHandler<Inputs> = (valorInputs, evento) => {
-    const botaoId = evento?.nativeEvent?.submitter?.id
+    api
+      .get('/login', { params: valorInputs })
+      .then((resposta) => {
+        localStorage.removeItem('dadosUsuario')
+        localStorage.setItem('dadosUsuario', JSON.stringify(resposta.data))
 
-    if (botaoId === 'admin') {
-      setDadosInputs(valorInputs)
-      openModal()
-    } else {
-      api({
-        method: 'post',
-        url: '/alunos',
-        data: valorInputs,
+        setLogou(true)
+        setDadosUsuario(resposta.data)
       })
-        .then((response) => console.log(response))
-        .catch((error) => console.error(error))
-    }
+      .catch((error) => console.error(error))
   }
+
+  useEffect(() => {
+    if (logou && dadosUsuario) {
+      router.push('/developerCourses')
+    }
+  }, [dadosUsuario])
 
   return (
     <>
@@ -91,37 +68,29 @@ export default function Login() {
       <div className={style.corpo}>
         <div className={style.container}>
           <aside className={style.aside_login}>
-            <div className={style.aside_conteudo}>
-              <h1 className={style.aside_login_titulo}>Bem-vindo de volta!</h1>
-              <p className={style.aside_login_parag}>
-                Acesse sua conta agora mesmo.
-              </p>
+            <div className={style.aside_texto}>
+              <h1 className={style.aside_login_titulo}>
+                Quer fazer parte da nossa comunidade?
+              </h1>
+              <p className={style.aside_login_parag}>Inicie sua evolução</p>
             </div>
 
             <BotaoGrande
-              texto="Entrar"
-              cor="#01132B"
+              texto="Cadastre-se"
+              cor="#2B73BF"
               id="login"
               tipo="button"
             />
           </aside>
           <form onSubmit={handleSubmit(onSubmit)} className={style.form_login}>
-            <h1 className={style.form_login_titulo}>
-              Cadastre-se e evolua sua carreira na tecnologia
-            </h1>
+            <div className={style.container_texto}>
+              <h1 className={style.form_login_titulo}>Bem-vindo de volta!</h1>
+              <p className={style.form_login_parag}>
+                Acesse sua conta agora mesmo.
+              </p>
+            </div>
+
             <div className={style.form_input}>
-              {errors.nome && <span></span>}
-              <Input
-                texto="Nome"
-                tipo="text"
-                icone="name"
-                {...register('nome', {
-                  required: true,
-                })}
-              />
-              {errors.nome?.type === 'required' && (
-                <span className={style.erro}>O campo nome é obrigatório!</span>
-              )}
               <Input
                 texto="Email"
                 tipo="email"
@@ -170,52 +139,12 @@ export default function Login() {
 
             <div className={style.form_botoes}>
               <BotaoGrande
-                texto="Ensinar"
+                texto="Entrar"
                 cor="#2B73BF"
                 id="admin"
                 tipo="submit"
               />
-              <BotaoGrande
-                texto="Aprender"
-                cor="#4A49C7"
-                id="aluno"
-                tipo="submit"
-              />
             </div>
-
-            <Modal
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-              style={customStyles}
-              contentLabel="Example Modal"
-            >
-              <div className={style.modal_container}>
-                <h2 className={style.modal_titulo}>
-                  Olá, admin! Digite seu cargo.
-                </h2>
-                <div className={style.cargo}>
-                  <label className={style.cargo_texto} htmlFor="cargo">
-                    Cargo:
-                  </label>
-                  <input
-                    className={style.input}
-                    type="text"
-                    id="cargo"
-                    onChange={preencherCargo}
-                  />
-                </div>
-                <a title="Fechar" className={style.fechar} onClick={closeModal}>
-                  x
-                </a>
-
-                <button
-                  className={style.botao}
-                  onClick={finalizacaoCadastroAdmin}
-                >
-                  Ok
-                </button>
-              </div>
-            </Modal>
           </form>
         </div>
       </div>
