@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
-import style from './Curses.module.css'
+import Curso from '../Curso';
+import style from './Courses.module.css'
 
 interface ICurso {
   id: string,
@@ -18,7 +19,7 @@ interface ICurso {
   link: string,
 }
 
-export default function Cursos() {
+export default function Courses() {
   const [cursos, setCursos] = useState<ICurso[]>([]);
 
   useEffect(() => {
@@ -38,13 +39,7 @@ export default function Cursos() {
 
   return cursos.map((curso) => {
     return (
-      <div key={curso?.id} className={style.curse}>
-        <p className={style.tittle}>{curso?.titulo}</p>
-        <div className={style.containerLinks}>
-          <a href={curso.link} target="_blank"><p>Ver conteúdo</p></a>
-          <a href={curso.link} target="_blank"><div className={style.imgArrow} role="img" aria-label="Uma logo em formato de circulo com uma seta 'vazada' ao meio, apontando a esquerda."></div></a>
-        </div>
-      </div>
+      <Curso admin={false} link={curso.link} titulo={curso.titulo} id={curso.id}/>
     );
   })
 }

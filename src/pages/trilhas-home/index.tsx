@@ -32,7 +32,7 @@ export function ContainerTrilhas() {
     return (
       <div key={trilha._id} className={style.trilhas}>
         <p className={style.pTrilhas}>{trilha.titulo}</p>
-        <Button style={{ color: "#0C1828", boxShadow: ",0px 4px 4px rgba(0, 0, 0, 0.25)", border: "#D2D6DC", backgroundColor: "#EBEDF0", borderRadius: "20px", fontSize: "1.2rem", marginRight: "2rem" }}><Link href="/"><p className={style.pButton}>Escolher trilha</p></Link></Button>      </div>)
+        <Button style={{ color: "#0C1828", boxShadow: ",0px 4px 4px rgba(0, 0, 0, 0.25)", border: "#D2D6DC", backgroundColor: "#EBEDF0", borderRadius: "20px", fontSize: "1.2rem", marginRight: "2rem" }}><Link href="/developerCourses"><p className={style.pButton}>Escolher trilha</p></Link></Button>      </div>)
   })
 }
 export default function TrilhasHome() {

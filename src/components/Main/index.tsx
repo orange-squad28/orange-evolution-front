@@ -5,6 +5,7 @@ import style from './Main.module.css'
 import Button from '../Button';
 import { url } from 'inspector';
 import TrilhasMobile from '../Trilhas';
+import Cursos from '../Courses';
 
 export default function Main() {
   return (

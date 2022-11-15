@@ -40,6 +40,7 @@
 
 .pTrilhas {
     font-size: 2rem;
+    font-weight: 800;
     width: 30rem;
     color: #0C1828F2;
 }
@@ -55,8 +56,9 @@
     }
 
     .trilhas {
+        padding: 0 2rem;
         gap: 4rem;
-        width: 90%;
+        width: 80%;
     }
 
     .pTrilhas {
@@ -64,6 +66,7 @@
     }
 
     .pButton {
+        width: 8rem;
         font-size: 1rem;
     }
 }
