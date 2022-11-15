@@ -3,7 +3,7 @@ import Cabecalho from 'src/components/Cabecalho'
 import Input from 'src/components/Input'
 import style from './Login.module.css'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { useEffect, useRef, useState } from 'react'
+import { SetStateAction, useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import api from 'src/services/api'
 import Modal from 'react-modal'
@@ -57,8 +57,8 @@ export default function Login() {
       .catch((error) => console.error(error))
   }
 
-  function preencherCargo(e) {
-    setCargoInput(e.target.value)
+  function preencherCargo(event: { target: { value: SetStateAction<string> } }) {
+    setCargoInput(event.target.value)
   }
 
   const {
